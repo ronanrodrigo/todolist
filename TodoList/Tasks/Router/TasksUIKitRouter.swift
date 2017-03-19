@@ -4,7 +4,11 @@ import UIKit
 class TasksUIKitRouter: TasksRouter {
 
     private let window: UIWindow
-    private let navigationController: UINavigationController = UINavigationController()
+    private let navigationController: UINavigationController = {
+        let navigationController = UINavigationController()
+        navigationController.navigationBar.isTranslucent = false
+        return navigationController
+    }()
 
     init(window: UIWindow) {
         self.window = window
