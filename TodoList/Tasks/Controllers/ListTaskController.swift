@@ -14,15 +14,17 @@ class ListTaskController: UIViewController {
     init(router: TasksRouter) {
         self.router = router
         super.init(nibName: nil, bundle: nil)
-        listTaskDataSource = ListTaskDataSource(tasks: []) { [unowned self] in
-            DeleteTaskUseCaseFactory.make(presenter: self).delete(identifier: $0)
-        }
+        listTaskDataSource = ListTaskDataSource(
+            tasks: [],
+            deleteTask: { [unowned self] in DeleteTaskUseCaseFactory.make(presenter: self).delete(identifier: $0) },
+            updateTask: { [unowned self] in UpdateTaskUseCaseFactory.make(presenter: self).update(task: $0) }
+        )
         listTaskView = ListTaskView(dataSource: listTaskDataSource)
         setSubviews()
         setConstraints()
         setNavigation()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError(NSCoder.initCoderError)
     }
@@ -67,7 +69,7 @@ extension ListTaskController: ListTasksPresenter {
         listTaskDataSource.update(with: tasks)
         listTaskView.reloadData()
     }
-    
+
 }
 
 extension ListTaskController: DeleteTasksPresenter {
@@ -75,6 +77,14 @@ extension ListTaskController: DeleteTasksPresenter {
     func deleted(identifier: Double) {
         guard let row = listTaskDataSource.delete(taskWithIdentifier: identifier) else { return }
         listTaskView.removeItem(at: row)
+    }
+
+}
+
+extension ListTaskController: UpdateTaskPresenter {
+
+    func updated(task: Task) {
+        listTaskDataSource.update(task: task)
     }
 
 }

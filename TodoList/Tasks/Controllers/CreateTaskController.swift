@@ -42,10 +42,11 @@ class CreateTaskController: UIViewController {
     }
 
     @objc private func didTouchAtSave() {
+        guard let task = createTaskView.generateTask() else { return }
         saveBarButton.isEnabled = false
         CreateTaskUseCaseFactory
             .make(presenter: CreateTaskUIKitPresenterFactory.make(router: router))
-            .create(task: createTaskView.generateTask())
+            .create(task: task)
     }
 
 }

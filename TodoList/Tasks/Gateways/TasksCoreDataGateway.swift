@@ -37,13 +37,8 @@ class TasksCoreDataGateway: TasksGateway {
     }
 
     func delete(identifier: Double, completion: ((Result<Task>) -> Void)) throws {
-        let fetchTasks = NSFetchRequest<TaskEntityCoreData>(entityName: entityName)
-        fetchTasks.predicate = NSPredicate(format: String.Predicate.equal(fieldName: String.identifierPropertyName).format(),
-                                           argumentArray: [identifier])
-
         do {
-            let tasks = try persistentContainer.viewContext.fetch(fetchTasks)
-            guard let task = tasks.first else { throw TasksError.notFound(identifier: identifier) }
+            let task = try find(byIdentifier: identifier)
             persistentContainer.viewContext.delete(task)
             completion(Result.success(task))
         } catch {
@@ -51,4 +46,23 @@ class TasksCoreDataGateway: TasksGateway {
         }
     }
 
+    func update(task: Task, completion: ((Result<Task>) -> Void)) throws {
+        do {
+            let taskCoreData = try find(byIdentifier: task.identifier)
+            taskCoreData.name = task.name
+            taskCoreData.completed = task.completed
+            completion(Result.success(taskCoreData))
+        } catch {
+            completion(Result.fail(error))
+        }
+    }
+
+    private func find(byIdentifier identifier: Double) throws -> TaskEntityCoreData {
+        let fetchTasks = NSFetchRequest<TaskEntityCoreData>(entityName: entityName)
+        fetchTasks.predicate = NSPredicate(format: String.Predicate.equal(fieldName: String.identifierPropertyName).format(),
+                                           argumentArray: [identifier])
+        let tasks = try persistentContainer.viewContext.fetch(fetchTasks)
+        guard let task = tasks.first else { throw TasksError.notFound(identifier: identifier) }
+        return task
+    }
 }

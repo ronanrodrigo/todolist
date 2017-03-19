@@ -73,10 +73,11 @@ class CreateTaskView: UIView {
         verticalStackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
     }
 
-    func generateTask() -> Task {
+    func generateTask() -> Task? {
+        guard let taskName = nameTextField.text, taskName != .empty else { return nil }
         return TaskEntity(
             identifier: .newEnityIdentifier,
-            name: nameTextField.text ?? "",
+            name: taskName,
             completed: completedSwitch.isOn)
     }
 }

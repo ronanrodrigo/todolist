@@ -9,9 +9,10 @@ class TaskItemViewCell: UITableViewCell {
         return label
     }()
 
-    private let completedSwitch: UISwitch = {
+    private lazy var completedSwitch: UISwitch = {
         let completedSwitch = UISwitch()
         completedSwitch.onTintColor = .black
+        completedSwitch.addTarget(self, action: #selector(didChangeCompletedSwitch), for: .valueChanged)
         return completedSwitch
     }()
 
@@ -25,6 +26,16 @@ class TaskItemViewCell: UITableViewCell {
         return stackView
     }()
 
+    private var updateTask: ((Task) -> Void)?
+
+    private var task: Task? {
+        didSet {
+            guard let task = task else { return }
+            nameLabel.text = task.name
+            completedSwitch.isOn = task.completed
+        }
+    }
+
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setStackView()
@@ -34,6 +45,11 @@ class TaskItemViewCell: UITableViewCell {
 
     required init?(coder aDecoder: NSCoder) {
         fatalError(NSCoder.initCoderError)
+    }
+
+    func setData(task: Task, updateTask: @escaping ((Task) -> Void)) {
+        self.task = task
+        self.updateTask = updateTask
     }
 
     private func setStackView() {
@@ -49,9 +65,9 @@ class TaskItemViewCell: UITableViewCell {
         horizontalStackView.edges(equalToView: contentView, constant: .defaultMargin)
     }
 
-    func setData(task: Task) {
-        nameLabel.text = task.name
-        completedSwitch.isOn = task.completed
+    @objc func didChangeCompletedSwitch() {
+        guard let updateTask = updateTask, let task = task else { return }
+        updateTask(TaskEntity(identifier: task.identifier, name: task.name, completed: completedSwitch.isOn))
     }
     
 }

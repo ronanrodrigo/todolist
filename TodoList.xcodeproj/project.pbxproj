@@ -27,6 +27,9 @@
 		34C61C861E7F0ADC00AE8AB6 /* DeleteTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C61C851E7F0ADC00AE8AB6 /* DeleteTaskUseCase.swift */; };
 		34C61C881E7F0AFC00AE8AB6 /* DeleteTasksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C61C871E7F0AFC00AE8AB6 /* DeleteTasksPresenter.swift */; };
 		34C61C8A1E7F0BDC00AE8AB6 /* DeleteTaskUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C61C891E7F0BDC00AE8AB6 /* DeleteTaskUseCaseFactory.swift */; };
+		34C61C8C1E7F161100AE8AB6 /* UpdateTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C61C8B1E7F161100AE8AB6 /* UpdateTaskUseCase.swift */; };
+		34C61C8E1E7F163400AE8AB6 /* UpdateTaskPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C61C8D1E7F163400AE8AB6 /* UpdateTaskPresenter.swift */; };
+		34C61C901E7F19C000AE8AB6 /* UpdateTaskUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C61C8F1E7F19C000AE8AB6 /* UpdateTaskUseCaseFactory.swift */; };
 		34D948011E7E27E0001EB043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948001E7E27E0001EB043 /* AppDelegate.swift */; };
 		34D948091E7E27E0001EB043 /* TodoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34D948071E7E27E0001EB043 /* TodoList.xcdatamodeld */; };
 		34D9480B1E7E27E0001EB043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D9480A1E7E27E0001EB043 /* Assets.xcassets */; };
@@ -73,6 +76,9 @@
 		34C61C851E7F0ADC00AE8AB6 /* DeleteTaskUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteTaskUseCase.swift; sourceTree = "<group>"; };
 		34C61C871E7F0AFC00AE8AB6 /* DeleteTasksPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteTasksPresenter.swift; sourceTree = "<group>"; };
 		34C61C891E7F0BDC00AE8AB6 /* DeleteTaskUseCaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteTaskUseCaseFactory.swift; sourceTree = "<group>"; };
+		34C61C8B1E7F161100AE8AB6 /* UpdateTaskUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTaskUseCase.swift; sourceTree = "<group>"; };
+		34C61C8D1E7F163400AE8AB6 /* UpdateTaskPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTaskPresenter.swift; sourceTree = "<group>"; };
+		34C61C8F1E7F19C000AE8AB6 /* UpdateTaskUseCaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTaskUseCaseFactory.swift; sourceTree = "<group>"; };
 		34D947FD1E7E27E0001EB043 /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D948001E7E27E0001EB043 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34D948081E7E27E0001EB043 /* TodoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoList.xcdatamodel; sourceTree = "<group>"; };
@@ -124,7 +130,6 @@
 			children = (
 				34C61C7F1E7F081600AE8AB6 /* TasksError.swift */,
 			);
-			name = Exceptions;
 			path = Exceptions;
 			sourceTree = "<group>";
 		};
@@ -264,6 +269,7 @@
 				34D948371E7E3CBB001EB043 /* Task.swift */,
 				34D9484A1E7E4001001EB043 /* TasksGateway.swift */,
 				34D948671E7E597B001EB043 /* TasksRouter.swift */,
+				34C61C8D1E7F163400AE8AB6 /* UpdateTaskPresenter.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -282,6 +288,7 @@
 				34D948581E7E49C9001EB043 /* CreateTaskUseCase.swift */,
 				34C61C851E7F0ADC00AE8AB6 /* DeleteTaskUseCase.swift */,
 				343C13D01E7ED3B200DFE86E /* ListAllTasksUseCase.swift */,
+				34C61C8B1E7F161100AE8AB6 /* UpdateTaskUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -295,6 +302,7 @@
 				343C13DA1E7ED77100DFE86E /* ListAllTasksUseCaseFactory.swift */,
 				34D9485E1E7E5039001EB043 /* TasksCoreDataGatewayFactory.swift */,
 				34D9486B1E7E5B4F001EB043 /* TasksUIKitRouterFactory.swift */,
+				34C61C8F1E7F19C000AE8AB6 /* UpdateTaskUseCaseFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -393,6 +401,8 @@
 				34D9485B1E7E4A6C001EB043 /* CreateTaskPresenter.swift in Sources */,
 				34C61C861E7F0ADC00AE8AB6 /* DeleteTaskUseCase.swift in Sources */,
 				34D948201E7E2C06001EB043 /* UIView+Constraints.swift in Sources */,
+				34C61C8E1E7F163400AE8AB6 /* UpdateTaskPresenter.swift in Sources */,
+				34C61C8C1E7F161100AE8AB6 /* UpdateTaskUseCase.swift in Sources */,
 				34589B861E7E70150089A901 /* CreateTaskView.swift in Sources */,
 				343C13DB1E7ED77100DFE86E /* ListAllTasksUseCaseFactory.swift in Sources */,
 				34D948011E7E27E0001EB043 /* AppDelegate.swift in Sources */,
@@ -412,6 +422,7 @@
 				34589B801E7E65170089A901 /* CreateTaskController.swift in Sources */,
 				343C13D11E7ED3B200DFE86E /* ListAllTasksUseCase.swift in Sources */,
 				34D948381E7E3CBB001EB043 /* Task.swift in Sources */,
+				34C61C901E7F19C000AE8AB6 /* UpdateTaskUseCaseFactory.swift in Sources */,
 				343C13C91E7E8FFC00DFE86E /* Double+Constants.swift in Sources */,
 				34D948481E7E3E6F001EB043 /* TaskEntityCoreData+CoreDataProperties.swift in Sources */,
 				34D948191E7E28E3001EB043 /* ListTaskController.swift in Sources */,
@@ -535,6 +546,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TodoList/Base/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.todolist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -547,6 +559,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TodoList/Base/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.todolist;
 				PRODUCT_NAME = "$(TARGET_NAME)";

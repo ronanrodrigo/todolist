@@ -6,14 +6,21 @@ class ListTaskDataSource: NSObject, UITableViewDataSource {
     private var isRegistered = false
     private var tasks: [Task]
     private let deleteTask: ((Double) -> Void)
+    private let updateTask: ((Task) -> Void)
     
-    init(tasks: [Task], deleteTask: @escaping ((Double) -> Void)) {
+    init(tasks: [Task], deleteTask: @escaping ((Double) -> Void), updateTask: @escaping ((Task) -> Void)) {
         self.tasks = tasks
         self.deleteTask = deleteTask
+        self.updateTask = updateTask
     }
 
     func update(with tasks: [Task]) {
         self.tasks = tasks
+    }
+
+    func update(task: Task) {
+        guard let taskIndex = tasks.index(where: { $0.identifier == task.identifier }) else { return }
+        tasks[taskIndex] = task
     }
 
     func delete(taskWithIdentifier identifier: Double) -> Int? {
@@ -31,7 +38,9 @@ class ListTaskDataSource: NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: TaskItemViewCell.reuseIdentifier, for: indexPath)
         guard let listItemCell = cell as? TaskItemViewCell else { return cell }
 
-        listItemCell.setData(task: tasks[indexPath.row])
+        listItemCell.setData(task: tasks[indexPath.row]) { [unowned self] task in
+            self.updateTask(task)
+        }
 
         return listItemCell
     }
