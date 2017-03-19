@@ -15,6 +15,7 @@ class TasksCoreDataGateway: TasksGateway {
 
         taskCoreData.name = task.name
         taskCoreData.completed = task.completed
+        taskCoreData.identifier = Date().timeIntervalSince1970
 
         do {
             try persistentContainer.viewContext.save()

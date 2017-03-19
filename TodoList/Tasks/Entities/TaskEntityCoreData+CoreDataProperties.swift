@@ -17,5 +17,6 @@ extension TaskEntityCoreData {
 
     @NSManaged public var completed: Bool
     @NSManaged public var name: String
+    @NSManaged public var identifier: Double
 
 }

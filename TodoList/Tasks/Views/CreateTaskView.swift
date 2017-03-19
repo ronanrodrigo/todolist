@@ -74,6 +74,9 @@ class CreateTaskView: UIView {
     }
 
     func generateTask() -> Task {
-        return TaskEntity(name: nameTextField.text ?? "", completed: completedSwitch.isOn)
+        return TaskEntity(
+            identifier: .newEnityIdentifier,
+            name: nameTextField.text ?? "",
+            completed: completedSwitch.isOn)
     }
 }

@@ -6,4 +6,6 @@ extension Double {
 
     static let defaultDelay: Double = 1
 
+    static let newEnityIdentifier: Double = 0
+
 }
