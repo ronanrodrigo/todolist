@@ -9,12 +9,11 @@ class CreateTaskUIKitPresenter: CreateTaskPresenter {
     }
 
     func show(created task: Task) {
-        dump(task)
-        router.list(withMessage: String.Tasks.Create.Message.success)
+        router.list(withSuccessMessage: String.Tasks.Create.Message.success)
     }
 
     func show(error: Error) {
-        dump(error)
+        router.list(withFailMessage: error.localizedDescription)
     }
 
 }
