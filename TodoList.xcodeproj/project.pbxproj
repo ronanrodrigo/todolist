@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34589B821E7E6C770089A901 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34589B811E7E6C770089A901 /* Localizable.strings */; };
+		34589B841E7E6CFF0089A901 /* String+Translate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34589B831E7E6CFF0089A901 /* String+Translate.swift */; };
 		34D948011E7E27E0001EB043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948001E7E27E0001EB043 /* AppDelegate.swift */; };
 		34D948091E7E27E0001EB043 /* TodoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34D948071E7E27E0001EB043 /* TodoList.xcdatamodeld */; };
 		34D9480B1E7E27E0001EB043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D9480A1E7E27E0001EB043 /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34589B811E7E6C770089A901 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		34589B831E7E6CFF0089A901 /* String+Translate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Translate.swift"; sourceTree = "<group>"; };
 		34D947FD1E7E27E0001EB043 /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D948001E7E27E0001EB043 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34D948081E7E27E0001EB043 /* TodoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoList.xcdatamodel; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 				34D9480A1E7E27E0001EB043 /* Assets.xcassets */,
 				34D9480F1E7E27E0001EB043 /* Info.plist */,
 				34D9480C1E7E27E0001EB043 /* LaunchScreen.storyboard */,
+				34589B811E7E6C770089A901 /* Localizable.strings */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 			children = (
 				34D948271E7E354F001EB043 /* NSCoder+InitCoderMessage.swift */,
 				34D9481F1E7E2C06001EB043 /* UIView+Constraints.swift */,
+				34589B831E7E6CFF0089A901 /* String+Translate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -291,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34D9480E1E7E27E0001EB043 /* LaunchScreen.storyboard in Resources */,
+				34589B821E7E6C770089A901 /* Localizable.strings in Resources */,
 				34D9480B1E7E27E0001EB043 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +328,7 @@
 				34D948381E7E3CBB001EB043 /* Task.swift in Sources */,
 				34D948481E7E3E6F001EB043 /* TaskEntityCoreData+CoreDataProperties.swift in Sources */,
 				34D948191E7E28E3001EB043 /* TaskListController.swift in Sources */,
+				34589B841E7E6CFF0089A901 /* String+Translate.swift in Sources */,
 				34D948281E7E354F001EB043 /* NSCoder+InitCoderMessage.swift in Sources */,
 				34D9484B1E7E4001001EB043 /* TasksGateway.swift in Sources */,
 			);
