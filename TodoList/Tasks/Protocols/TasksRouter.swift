@@ -1,7 +1,6 @@
 import Foundation
 
-protocol TasksRouter {
+protocol TasksRouter: class {
     func root()
-    func list()
     func create()
 }

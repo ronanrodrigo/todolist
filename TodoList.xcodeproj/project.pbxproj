@@ -233,7 +233,6 @@
 			children = (
 				34D948691E7E59CB001EB043 /* TasksUIKitRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
