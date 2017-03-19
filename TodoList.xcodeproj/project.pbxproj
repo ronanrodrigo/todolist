@@ -13,6 +13,9 @@
 		343C13C71E7E8F5400DFE86E /* UINavigationController+Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343C13C61E7E8F5400DFE86E /* UINavigationController+Message.swift */; };
 		343C13C91E7E8FFC00DFE86E /* Double+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343C13C81E7E8FFC00DFE86E /* Double+Constants.swift */; };
 		343C13CB1E7ECE1400DFE86E /* UIColors+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343C13CA1E7ECE1400DFE86E /* UIColors+Constants.swift */; };
+		343C13D11E7ED3B200DFE86E /* ListAllTasksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343C13D01E7ED3B200DFE86E /* ListAllTasksUseCase.swift */; };
+		343C13D31E7ED3E400DFE86E /* ListTasksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343C13D21E7ED3E400DFE86E /* ListTasksPresenter.swift */; };
+		343C13DB1E7ED77100DFE86E /* ListAllTasksUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343C13DA1E7ED77100DFE86E /* ListAllTasksUseCaseFactory.swift */; };
 		34589B801E7E65170089A901 /* CreateTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34589B7F1E7E65170089A901 /* CreateTaskController.swift */; };
 		34589B821E7E6C770089A901 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34589B811E7E6C770089A901 /* Localizable.strings */; };
 		34589B841E7E6CFF0089A901 /* String+Translate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34589B831E7E6CFF0089A901 /* String+Translate.swift */; };
@@ -50,6 +53,9 @@
 		343C13C61E7E8F5400DFE86E /* UINavigationController+Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Message.swift"; sourceTree = "<group>"; };
 		343C13C81E7E8FFC00DFE86E /* Double+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Constants.swift"; sourceTree = "<group>"; };
 		343C13CA1E7ECE1400DFE86E /* UIColors+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColors+Constants.swift"; sourceTree = "<group>"; };
+		343C13D01E7ED3B200DFE86E /* ListAllTasksUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAllTasksUseCase.swift; sourceTree = "<group>"; };
+		343C13D21E7ED3E400DFE86E /* ListTasksPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTasksPresenter.swift; sourceTree = "<group>"; };
+		343C13DA1E7ED77100DFE86E /* ListAllTasksUseCaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAllTasksUseCaseFactory.swift; sourceTree = "<group>"; };
 		34589B7F1E7E65170089A901 /* CreateTaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskController.swift; sourceTree = "<group>"; };
 		34589B811E7E6C770089A901 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		34589B831E7E6CFF0089A901 /* String+Translate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Translate.swift"; sourceTree = "<group>"; };
@@ -232,6 +238,7 @@
 				34D948371E7E3CBB001EB043 /* Task.swift */,
 				34D9484A1E7E4001001EB043 /* TasksGateway.swift */,
 				34D948671E7E597B001EB043 /* TasksRouter.swift */,
+				343C13D21E7ED3E400DFE86E /* ListTasksPresenter.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -248,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				34D948581E7E49C9001EB043 /* CreateTaskUseCase.swift */,
+				343C13D01E7ED3B200DFE86E /* ListAllTasksUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -259,6 +267,7 @@
 				343C13BF1E7E815E00DFE86E /* CreateTaskUseCaseFactory.swift */,
 				34D9485E1E7E5039001EB043 /* TasksCoreDataGatewayFactory.swift */,
 				34D9486B1E7E5B4F001EB043 /* TasksUIKitRouterFactory.swift */,
+				343C13DA1E7ED77100DFE86E /* ListAllTasksUseCaseFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -355,6 +364,7 @@
 				34D9485B1E7E4A6C001EB043 /* CreateTaskPresenter.swift in Sources */,
 				34D948201E7E2C06001EB043 /* UIView+Constraints.swift in Sources */,
 				34589B861E7E70150089A901 /* CreateTaskView.swift in Sources */,
+				343C13DB1E7ED77100DFE86E /* ListAllTasksUseCaseFactory.swift in Sources */,
 				34D948011E7E27E0001EB043 /* AppDelegate.swift in Sources */,
 				34D948551E7E4774001EB043 /* Result.swift in Sources */,
 				343C13C51E7E824200DFE86E /* CreateTaskUIKitPresenterFactory.swift in Sources */,
@@ -363,10 +373,12 @@
 				34D948501E7E4123001EB043 /* TaskEntity.swift in Sources */,
 				343C13C71E7E8F5400DFE86E /* UINavigationController+Message.swift in Sources */,
 				34D948681E7E597B001EB043 /* TasksRouter.swift in Sources */,
+				343C13D31E7ED3E400DFE86E /* ListTasksPresenter.swift in Sources */,
 				343C13C31E7E81AD00DFE86E /* CreateTaskUIKitPresenter.swift in Sources */,
 				343C13C01E7E815E00DFE86E /* CreateTaskUseCaseFactory.swift in Sources */,
 				34D948471E7E3E6F001EB043 /* TaskEntityCoreData+CoreDataClass.swift in Sources */,
 				34589B801E7E65170089A901 /* CreateTaskController.swift in Sources */,
+				343C13D11E7ED3B200DFE86E /* ListAllTasksUseCase.swift in Sources */,
 				34D948381E7E3CBB001EB043 /* Task.swift in Sources */,
 				343C13C91E7E8FFC00DFE86E /* Double+Constants.swift in Sources */,
 				34D948481E7E3E6F001EB043 /* TaskEntityCoreData+CoreDataProperties.swift in Sources */,

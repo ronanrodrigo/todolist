@@ -3,7 +3,8 @@ import UIKit
 
 class ListTaskController: UIViewController {
 
-    private let taskListView: TaskListView
+    fileprivate let taskListView: TaskListView
+    fileprivate let taskListDataSource = TaskListDataSource(tasks: [])
     private var router: TasksRouter
 
     private lazy var createBarButton: UIBarButtonItem = {
@@ -12,7 +13,7 @@ class ListTaskController: UIViewController {
 
     init(router: TasksRouter) {
         self.router = router
-        taskListView = TaskListView(dataSource: TaskListDataSource(tasks: []))
+        taskListView = TaskListView(dataSource: taskListDataSource)
         super.init(nibName: nil, bundle: nil)
         setSubviews()
         setConstraints()
@@ -26,6 +27,7 @@ class ListTaskController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         createBarButton.isEnabled = true
+        fetchTasks()
     }
 
     private func setSubviews() {
@@ -41,8 +43,26 @@ class ListTaskController: UIViewController {
         title = String.Tasks.List.title
     }
 
+    private func fetchTasks() {
+        ListAllTasksUseCaseFactory.make(presenter: self).list()
+    }
+
     @objc private func didTouchAtCreateTask() {
         createBarButton.isEnabled = false
         router.create()
     }
+
+}
+
+extension ListTaskController: ListTasksPresenter {
+
+    func show(tasks: [Task]) {
+        taskListDataSource.update(tasks: tasks)
+        taskListView.reloadData()
+    }
+
+    func show(error: Error) {
+        navigationController?.show(message: error.localizedDescription, backgroundColor: .failBackground)
+    }
+    
 }

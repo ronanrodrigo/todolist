@@ -4,9 +4,13 @@ import UIKit
 class TaskListDataSource: NSObject, UITableViewDataSource {
 
     private var isRegistered = false
-    private let tasks: [Task]
+    private var tasks: [Task]
 
     init(tasks: [Task]) {
+        self.tasks = tasks
+    }
+
+    func update(tasks: [Task]) {
         self.tasks = tasks
     }
 
@@ -17,8 +21,9 @@ class TaskListDataSource: NSObject, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         registerCell(at: tableView)
         let cell = tableView.dequeueReusableCell(withIdentifier: TaskItemViewCell.reuseIdentifier, for: indexPath)
-
         guard let listItemCell = cell as? TaskItemViewCell else { return cell }
+
+        listItemCell.setData(task: tasks[indexPath.row])
 
         return listItemCell
     }

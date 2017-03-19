@@ -3,7 +3,7 @@ import UIKit
 
 class TaskItemViewCell: UITableViewCell {
 
-    private let titleLabel: UILabel = {
+    private let nameLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -14,17 +14,21 @@ class TaskItemViewCell: UITableViewCell {
         setSubviews()
         setConstraints()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError(NSCoder.initCoderError)
     }
 
     private func setSubviews() {
-        contentView.addSubview(titleLabel)
+        contentView.addSubview(nameLabel)
     }
 
     private func setConstraints() {
-        titleLabel.edges(equalToView: contentView)
+        nameLabel.edges(equalToLayout: layoutMarginsGuide)
+    }
+
+    func setData(task: Task) {
+        nameLabel.text = task.name
     }
     
 }

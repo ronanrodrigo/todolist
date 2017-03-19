@@ -3,7 +3,7 @@ import UIKit
 
 class TaskListView: UIView {
 
-    private let dataSource: UITableViewDataSource
+    private var dataSource: TaskListDataSource
 
     private let listTableView: UITableView = {
         let tableView = UITableView()
@@ -11,7 +11,7 @@ class TaskListView: UIView {
         return tableView
     }()
 
-    init(dataSource: UITableViewDataSource) {
+    init(dataSource: TaskListDataSource) {
         self.dataSource = dataSource
         super.init(frame: .zero)
         setDataSource()
@@ -34,6 +34,12 @@ class TaskListView: UIView {
 
     private func setConstraints() {
         listTableView.edges(equalToView: self)
+    }
+
+    func reloadData() {
+        DispatchQueue.main.async { [unowned self] in
+            self.listTableView.reloadData()
+        }
     }
 
 }

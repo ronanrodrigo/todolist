@@ -24,4 +24,14 @@ class TasksCoreDataGateway: TasksGateway {
         }
     }
 
+    func list(completion: ((Result<[Task]>) -> Void)) {
+        let fetchTasks = NSFetchRequest<TaskEntityCoreData>(entityName: entityName);
+
+        do {
+            let tasks = try persistentContainer.viewContext.fetch(fetchTasks)
+            completion(Result.success(tasks))
+        } catch {
+            completion(Result.fail(error))
+        }
+    }
 }
