@@ -26,6 +26,7 @@
 		34D948551E7E4774001EB043 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948541E7E4774001EB043 /* Result.swift */; };
 		34D948591E7E49C9001EB043 /* CreateTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948581E7E49C9001EB043 /* CreateTaskUseCase.swift */; };
 		34D9485B1E7E4A6C001EB043 /* CreateTaskPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9485A1E7E4A6C001EB043 /* CreateTaskPresenter.swift */; };
+		34D9485F1E7E5039001EB043 /* TasksCoreDataGatewayFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9485E1E7E5039001EB043 /* TasksCoreDataGatewayFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		34D948541E7E4774001EB043 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		34D948581E7E49C9001EB043 /* CreateTaskUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskUseCase.swift; sourceTree = "<group>"; };
 		34D9485A1E7E4A6C001EB043 /* CreateTaskPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskPresenter.swift; sourceTree = "<group>"; };
+		34D9485E1E7E5039001EB043 /* TasksCoreDataGatewayFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksCoreDataGatewayFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				34D9481A1E7E29A7001EB043 /* Controllers */,
 				34D948211E7E2DF4001EB043 /* DataSources */,
 				34D948301E7E3C1B001EB043 /* Entities */,
+				34D9485C1E7E5019001EB043 /* Factories */,
 				34D948491E7E3FE8001EB043 /* Gateways */,
 				34D9484E1E7E40C5001EB043 /* Protocols */,
 				34D948571E7E49B7001EB043 /* UseCases */,
@@ -199,8 +202,15 @@
 			children = (
 				34D948581E7E49C9001EB043 /* CreateTaskUseCase.swift */,
 			);
-			name = UseCases;
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		34D9485C1E7E5019001EB043 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				34D9485E1E7E5039001EB043 /* TasksCoreDataGatewayFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +293,7 @@
 				34D948201E7E2C06001EB043 /* UIView+Constraints.swift in Sources */,
 				34D948011E7E27E0001EB043 /* AppDelegate.swift in Sources */,
 				34D948551E7E4774001EB043 /* Result.swift in Sources */,
+				34D9485F1E7E5039001EB043 /* TasksCoreDataGatewayFactory.swift in Sources */,
 				34D948241E7E2E9C001EB043 /* TaskListDataSource.swift in Sources */,
 				34D948501E7E4123001EB043 /* TaskEntity.swift in Sources */,
 				34D948471E7E3E6F001EB043 /* TaskEntityCoreData+CoreDataClass.swift in Sources */,
