@@ -3,8 +3,8 @@ import UIKit
 
 class ListTaskController: UIViewController {
 
-    fileprivate let listTaskView: ListTaskView
-    fileprivate let listTaskDataSource = ListTaskDataSource(tasks: [])
+    fileprivate var listTaskView: ListTaskView!
+    fileprivate var listTaskDataSource: ListTaskDataSource!
     private var router: TasksRouter
 
     private lazy var createBarButton: UIBarButtonItem = {
@@ -13,8 +13,11 @@ class ListTaskController: UIViewController {
 
     init(router: TasksRouter) {
         self.router = router
-        listTaskView = ListTaskView(dataSource: listTaskDataSource)
         super.init(nibName: nil, bundle: nil)
+        listTaskDataSource = ListTaskDataSource(tasks: []) { [unowned self] in
+            DeleteTaskUseCaseFactory.make(presenter: self).delete(identifier: $0)
+        }
+        listTaskView = ListTaskView(dataSource: listTaskDataSource)
         setSubviews()
         setConstraints()
         setNavigation()
@@ -52,6 +55,10 @@ class ListTaskController: UIViewController {
         router.create()
     }
 
+    func show(error: Error) {
+        navigationController?.show(message: error.localizedDescription, backgroundColor: .failBackground)
+    }
+
 }
 
 extension ListTaskController: ListTasksPresenter {
@@ -60,9 +67,14 @@ extension ListTaskController: ListTasksPresenter {
         listTaskDataSource.update(with: tasks)
         listTaskView.reloadData()
     }
-
-    func show(error: Error) {
-        navigationController?.show(message: error.localizedDescription, backgroundColor: .failBackground)
-    }
     
+}
+
+extension ListTaskController: DeleteTasksPresenter {
+
+    func deleted(identifier: Double) {
+        guard let row = listTaskDataSource.delete(taskWithIdentifier: identifier) else { return }
+        listTaskView.removeItem(at: row)
+    }
+
 }

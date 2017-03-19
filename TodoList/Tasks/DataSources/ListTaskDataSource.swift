@@ -5,13 +5,21 @@ class ListTaskDataSource: NSObject, UITableViewDataSource {
 
     private var isRegistered = false
     private var tasks: [Task]
+    private let deleteTask: ((Double) -> Void)
     
-    init(tasks: [Task]) {
+    init(tasks: [Task], deleteTask: @escaping ((Double) -> Void)) {
         self.tasks = tasks
+        self.deleteTask = deleteTask
     }
 
     func update(with tasks: [Task]) {
         self.tasks = tasks
+    }
+
+    func delete(taskWithIdentifier identifier: Double) -> Int? {
+        guard let taskIndex = tasks.index(where: { $0.identifier == identifier }) else { return nil }
+        tasks.remove(at: taskIndex)
+        return taskIndex
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,8 +42,7 @@ class ListTaskDataSource: NSObject, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            tasks.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
+            deleteTask(tasks[indexPath.row].identifier)
         }
     }
 

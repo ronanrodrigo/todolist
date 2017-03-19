@@ -26,7 +26,7 @@ class TasksCoreDataGateway: TasksGateway {
     }
 
     func list(completion: ((Result<[Task]>) -> Void)) {
-        let fetchTasks = NSFetchRequest<TaskEntityCoreData>(entityName: entityName);
+        let fetchTasks = NSFetchRequest<TaskEntityCoreData>(entityName: entityName)
 
         do {
             let tasks = try persistentContainer.viewContext.fetch(fetchTasks)
@@ -35,4 +35,20 @@ class TasksCoreDataGateway: TasksGateway {
             completion(Result.fail(error))
         }
     }
+
+    func delete(identifier: Double, completion: ((Result<Task>) -> Void)) throws {
+        let fetchTasks = NSFetchRequest<TaskEntityCoreData>(entityName: entityName)
+        fetchTasks.predicate = NSPredicate(format: String.Predicate.equal(fieldName: String.identifierPropertyName).format(),
+                                           argumentArray: [identifier])
+
+        do {
+            let tasks = try persistentContainer.viewContext.fetch(fetchTasks)
+            guard let task = tasks.first else { throw TasksError.notFound(identifier: identifier) }
+            persistentContainer.viewContext.delete(task)
+            completion(Result.success(task))
+        } catch {
+            completion(Result.fail(error))
+        }
+    }
+
 }

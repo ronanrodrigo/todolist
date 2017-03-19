@@ -21,6 +21,12 @@
 		34589B841E7E6CFF0089A901 /* String+Translate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34589B831E7E6CFF0089A901 /* String+Translate.swift */; };
 		34589B861E7E70150089A901 /* CreateTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34589B851E7E70150089A901 /* CreateTaskView.swift */; };
 		34589B881E7E76D10089A901 /* CGFloat+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34589B871E7E76D10089A901 /* CGFloat+Constants.swift */; };
+		34C61C801E7F081600AE8AB6 /* TasksError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C61C7F1E7F081600AE8AB6 /* TasksError.swift */; };
+		34C61C821E7F09B800AE8AB6 /* String+Predicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C61C811E7F09B800AE8AB6 /* String+Predicates.swift */; };
+		34C61C841E7F0A5300AE8AB6 /* String+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C61C831E7F0A5300AE8AB6 /* String+Constants.swift */; };
+		34C61C861E7F0ADC00AE8AB6 /* DeleteTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C61C851E7F0ADC00AE8AB6 /* DeleteTaskUseCase.swift */; };
+		34C61C881E7F0AFC00AE8AB6 /* DeleteTasksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C61C871E7F0AFC00AE8AB6 /* DeleteTasksPresenter.swift */; };
+		34C61C8A1E7F0BDC00AE8AB6 /* DeleteTaskUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C61C891E7F0BDC00AE8AB6 /* DeleteTaskUseCaseFactory.swift */; };
 		34D948011E7E27E0001EB043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948001E7E27E0001EB043 /* AppDelegate.swift */; };
 		34D948091E7E27E0001EB043 /* TodoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34D948071E7E27E0001EB043 /* TodoList.xcdatamodeld */; };
 		34D9480B1E7E27E0001EB043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D9480A1E7E27E0001EB043 /* Assets.xcassets */; };
@@ -61,6 +67,12 @@
 		34589B831E7E6CFF0089A901 /* String+Translate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Translate.swift"; sourceTree = "<group>"; };
 		34589B851E7E70150089A901 /* CreateTaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskView.swift; sourceTree = "<group>"; };
 		34589B871E7E76D10089A901 /* CGFloat+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Constants.swift"; sourceTree = "<group>"; };
+		34C61C7F1E7F081600AE8AB6 /* TasksError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksError.swift; sourceTree = "<group>"; };
+		34C61C811E7F09B800AE8AB6 /* String+Predicates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Predicates.swift"; sourceTree = "<group>"; };
+		34C61C831E7F0A5300AE8AB6 /* String+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Constants.swift"; sourceTree = "<group>"; };
+		34C61C851E7F0ADC00AE8AB6 /* DeleteTaskUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteTaskUseCase.swift; sourceTree = "<group>"; };
+		34C61C871E7F0AFC00AE8AB6 /* DeleteTasksPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteTasksPresenter.swift; sourceTree = "<group>"; };
+		34C61C891E7F0BDC00AE8AB6 /* DeleteTaskUseCaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteTaskUseCaseFactory.swift; sourceTree = "<group>"; };
 		34D947FD1E7E27E0001EB043 /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D948001E7E27E0001EB043 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34D948081E7E27E0001EB043 /* TodoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoList.xcdatamodel; sourceTree = "<group>"; };
@@ -105,6 +117,15 @@
 				343C13C21E7E81AD00DFE86E /* CreateTaskUIKitPresenter.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		34C61C7E1E7F080500AE8AB6 /* Exceptions */ = {
+			isa = PBXGroup;
+			children = (
+				34C61C7F1E7F081600AE8AB6 /* TasksError.swift */,
+			);
+			name = Exceptions;
+			path = Exceptions;
 			sourceTree = "<group>";
 		};
 		34D947F41E7E27E0001EB043 = {
@@ -161,6 +182,7 @@
 				34D9481A1E7E29A7001EB043 /* Controllers */,
 				34D948211E7E2DF4001EB043 /* DataSources */,
 				34D948301E7E3C1B001EB043 /* Entities */,
+				34C61C7E1E7F080500AE8AB6 /* Exceptions */,
 				34D9485C1E7E5019001EB043 /* Factories */,
 				34D948491E7E3FE8001EB043 /* Gateways */,
 				343C13C11E7E818B00DFE86E /* Presenters */,
@@ -197,6 +219,8 @@
 				34589B871E7E76D10089A901 /* CGFloat+Constants.swift */,
 				343C13C81E7E8FFC00DFE86E /* Double+Constants.swift */,
 				34D948271E7E354F001EB043 /* NSCoder+InitCoderMessage.swift */,
+				34C61C831E7F0A5300AE8AB6 /* String+Constants.swift */,
+				34C61C811E7F09B800AE8AB6 /* String+Predicates.swift */,
 				34589B831E7E6CFF0089A901 /* String+Translate.swift */,
 				343C13CA1E7ECE1400DFE86E /* UIColors+Constants.swift */,
 				343C13C61E7E8F5400DFE86E /* UINavigationController+Message.swift */,
@@ -235,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				34D9485A1E7E4A6C001EB043 /* CreateTaskPresenter.swift */,
+				34C61C871E7F0AFC00AE8AB6 /* DeleteTasksPresenter.swift */,
 				343C13D21E7ED3E400DFE86E /* ListTasksPresenter.swift */,
 				34D948371E7E3CBB001EB043 /* Task.swift */,
 				34D9484A1E7E4001001EB043 /* TasksGateway.swift */,
@@ -255,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				34D948581E7E49C9001EB043 /* CreateTaskUseCase.swift */,
+				34C61C851E7F0ADC00AE8AB6 /* DeleteTaskUseCase.swift */,
 				343C13D01E7ED3B200DFE86E /* ListAllTasksUseCase.swift */,
 			);
 			path = UseCases;
@@ -265,6 +291,7 @@
 			children = (
 				343C13C41E7E824200DFE86E /* CreateTaskUIKitPresenterFactory.swift */,
 				343C13BF1E7E815E00DFE86E /* CreateTaskUseCaseFactory.swift */,
+				34C61C891E7F0BDC00AE8AB6 /* DeleteTaskUseCaseFactory.swift */,
 				343C13DA1E7ED77100DFE86E /* ListAllTasksUseCaseFactory.swift */,
 				34D9485E1E7E5039001EB043 /* TasksCoreDataGatewayFactory.swift */,
 				34D9486B1E7E5B4F001EB043 /* TasksUIKitRouterFactory.swift */,
@@ -360,8 +387,11 @@
 				34D9486C1E7E5B4F001EB043 /* TasksUIKitRouterFactory.swift in Sources */,
 				34D948261E7E2FAF001EB043 /* TaskItemViewCell.swift in Sources */,
 				34D948091E7E27E0001EB043 /* TodoList.xcdatamodeld in Sources */,
+				34C61C8A1E7F0BDC00AE8AB6 /* DeleteTaskUseCaseFactory.swift in Sources */,
+				34C61C801E7F081600AE8AB6 /* TasksError.swift in Sources */,
 				34589B881E7E76D10089A901 /* CGFloat+Constants.swift in Sources */,
 				34D9485B1E7E4A6C001EB043 /* CreateTaskPresenter.swift in Sources */,
+				34C61C861E7F0ADC00AE8AB6 /* DeleteTaskUseCase.swift in Sources */,
 				34D948201E7E2C06001EB043 /* UIView+Constraints.swift in Sources */,
 				34589B861E7E70150089A901 /* CreateTaskView.swift in Sources */,
 				343C13DB1E7ED77100DFE86E /* ListAllTasksUseCaseFactory.swift in Sources */,
@@ -370,7 +400,9 @@
 				343C13C51E7E824200DFE86E /* CreateTaskUIKitPresenterFactory.swift in Sources */,
 				34D9485F1E7E5039001EB043 /* TasksCoreDataGatewayFactory.swift in Sources */,
 				34D948241E7E2E9C001EB043 /* ListTaskDataSource.swift in Sources */,
+				34C61C841E7F0A5300AE8AB6 /* String+Constants.swift in Sources */,
 				34D948501E7E4123001EB043 /* TaskEntity.swift in Sources */,
+				34C61C821E7F09B800AE8AB6 /* String+Predicates.swift in Sources */,
 				343C13C71E7E8F5400DFE86E /* UINavigationController+Message.swift in Sources */,
 				34D948681E7E597B001EB043 /* TasksRouter.swift in Sources */,
 				343C13D31E7ED3E400DFE86E /* ListTasksPresenter.swift in Sources */,
@@ -384,6 +416,7 @@
 				34D948481E7E3E6F001EB043 /* TaskEntityCoreData+CoreDataProperties.swift in Sources */,
 				34D948191E7E28E3001EB043 /* ListTaskController.swift in Sources */,
 				34589B841E7E6CFF0089A901 /* String+Translate.swift in Sources */,
+				34C61C881E7F0AFC00AE8AB6 /* DeleteTasksPresenter.swift in Sources */,
 				34D948281E7E354F001EB043 /* NSCoder+InitCoderMessage.swift in Sources */,
 				34D9484B1E7E4001001EB043 /* TasksGateway.swift in Sources */,
 			);

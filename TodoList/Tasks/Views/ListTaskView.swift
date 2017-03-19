@@ -44,4 +44,9 @@ class ListTaskView: UIView {
         }
     }
 
+    func removeItem(at row: Int) {
+        let indexPath = IndexPath(row: row, section: 0)
+        listTableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+
 }
