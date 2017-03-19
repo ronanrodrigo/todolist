@@ -23,6 +23,7 @@
 		34D9484B1E7E4001001EB043 /* TasksGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9484A1E7E4001001EB043 /* TasksGateway.swift */; };
 		34D9484D1E7E407D001EB043 /* TasksCoreDataGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9484C1E7E407D001EB043 /* TasksCoreDataGateway.swift */; };
 		34D948501E7E4123001EB043 /* TaskEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9484F1E7E4123001EB043 /* TaskEntity.swift */; };
+		34D948551E7E4774001EB043 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948541E7E4774001EB043 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		34D9484A1E7E4001001EB043 /* TasksGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TasksGateway.swift; path = TasksGateway.swift; sourceTree = "<group>"; };
 		34D9484C1E7E407D001EB043 /* TasksCoreDataGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksCoreDataGateway.swift; sourceTree = "<group>"; };
 		34D9484F1E7E4123001EB043 /* TaskEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskEntity.swift; sourceTree = "<group>"; };
+		34D948541E7E4774001EB043 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				34D948151E7E2825001EB043 /* Base */,
 				34D948161E7E284F001EB043 /* CoreData */,
 				34D9481E1E7E2BEE001EB043 /* Extensions */,
+				34D948531E7E4738001EB043 /* Helpers */,
 				34D948171E7E289A001EB043 /* Tasks */,
 			);
 			path = TodoList;
@@ -176,6 +179,15 @@
 			);
 			name = Protocols;
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		34D948531E7E4738001EB043 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				34D948541E7E4774001EB043 /* Result.swift */,
+			);
+			name = Helpers;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
