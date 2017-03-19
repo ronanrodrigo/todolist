@@ -5,7 +5,7 @@ class ListTaskDataSource: NSObject, UITableViewDataSource {
 
     private var isRegistered = false
     private var tasks: [Task]
-
+    
     init(tasks: [Task]) {
         self.tasks = tasks
     }
@@ -26,6 +26,17 @@ class ListTaskDataSource: NSObject, UITableViewDataSource {
         listItemCell.setData(task: tasks[indexPath.row])
 
         return listItemCell
+    }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tasks.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
 
     private func registerCell(at tableView: UITableView) {
