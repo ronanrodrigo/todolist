@@ -10,8 +10,9 @@ class TaskItemViewCell: UITableViewCell {
     }()
 
     private let completedSwitch: UISwitch = {
-        let compltedSwitch = UISwitch()
-        return compltedSwitch
+        let completedSwitch = UISwitch()
+        completedSwitch.onTintColor = .black
+        return completedSwitch
     }()
 
     private let horizontalStackView: UIStackView = {

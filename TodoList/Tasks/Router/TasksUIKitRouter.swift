@@ -8,6 +8,7 @@ class TasksUIKitRouter: TasksRouter {
     private let navigationController: UINavigationController = {
         let navigationController = UINavigationController()
         navigationController.navigationBar.isTranslucent = false
+        navigationController.navigationBar.tintColor = .black
         return navigationController
     }()
 
