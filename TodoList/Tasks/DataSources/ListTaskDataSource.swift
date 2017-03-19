@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class TaskListDataSource: NSObject, UITableViewDataSource {
+class ListTaskDataSource: NSObject, UITableViewDataSource {
 
     private var isRegistered = false
     private var tasks: [Task]

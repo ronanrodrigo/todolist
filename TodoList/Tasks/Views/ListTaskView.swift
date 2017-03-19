@@ -1,9 +1,9 @@
 import Foundation
 import UIKit
 
-class TaskListView: UIView {
+class ListTaskView: UIView {
 
-    private var dataSource: TaskListDataSource
+    private var dataSource: ListTaskDataSource
 
     private let listTableView: UITableView = {
         let tableView = UITableView()
@@ -11,7 +11,7 @@ class TaskListView: UIView {
         return tableView
     }()
 
-    init(dataSource: TaskListDataSource) {
+    init(dataSource: ListTaskDataSource) {
         self.dataSource = dataSource
         super.init(frame: .zero)
         setDataSource()

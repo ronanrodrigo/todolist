@@ -3,8 +3,8 @@ import UIKit
 
 class ListTaskController: UIViewController {
 
-    fileprivate let taskListView: TaskListView
-    fileprivate let taskListDataSource = TaskListDataSource(tasks: [])
+    fileprivate let listTaskView: ListTaskView
+    fileprivate let listTaskDataSource = ListTaskDataSource(tasks: [])
     private var router: TasksRouter
 
     private lazy var createBarButton: UIBarButtonItem = {
@@ -13,7 +13,7 @@ class ListTaskController: UIViewController {
 
     init(router: TasksRouter) {
         self.router = router
-        taskListView = TaskListView(dataSource: taskListDataSource)
+        listTaskView = ListTaskView(dataSource: listTaskDataSource)
         super.init(nibName: nil, bundle: nil)
         setSubviews()
         setConstraints()
@@ -31,11 +31,11 @@ class ListTaskController: UIViewController {
     }
 
     private func setSubviews() {
-        view.addSubview(taskListView)
+        view.addSubview(listTaskView)
     }
 
     private func setConstraints() {
-        taskListView.edges(equalToView: view)
+        listTaskView.edges(equalToView: view)
     }
 
     private func setNavigation() {
@@ -57,8 +57,8 @@ class ListTaskController: UIViewController {
 extension ListTaskController: ListTasksPresenter {
 
     func show(tasks: [Task]) {
-        taskListDataSource.update(with: tasks)
-        taskListView.reloadData()
+        listTaskDataSource.update(with: tasks)
+        listTaskView.reloadData()
     }
 
     func show(error: Error) {
