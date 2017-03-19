@@ -4,25 +4,21 @@ import UIKit
 class TasksUIKitRouter: TasksRouter {
 
     private let window: UIWindow
-    private let taskListController: TaskListController
-
-    private lazy var navigationController: UINavigationController = {
-        return UINavigationController(rootViewController: self.taskListController)
-    }()
+    private let navigationController: UINavigationController = UINavigationController()
 
     init(window: UIWindow) {
         self.window = window
-        taskListController = TaskListController()
     }
 
     func root() {
+        navigationController.viewControllers = [TaskListController(router: self)]
         window.rootViewController = navigationController
     }
 
-    func list() {
-    }
-
-    func create() {
+    @objc func create() {
+        let createTaskController = CreateTaskController()
+        createTaskController.view.backgroundColor = .white
+        navigationController.pushViewController(createTaskController, animated: true)
     }
 
 }
