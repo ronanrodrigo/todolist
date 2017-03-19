@@ -185,8 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				34589B851E7E70150089A901 /* CreateTaskView.swift */,
-				34D948251E7E2FAF001EB043 /* TaskItemViewCell.swift */,
 				34D9481C1E7E29BA001EB043 /* ListTaskView.swift */,
+				34D948251E7E2FAF001EB043 /* TaskItemViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,10 +235,10 @@
 			isa = PBXGroup;
 			children = (
 				34D9485A1E7E4A6C001EB043 /* CreateTaskPresenter.swift */,
+				343C13D21E7ED3E400DFE86E /* ListTasksPresenter.swift */,
 				34D948371E7E3CBB001EB043 /* Task.swift */,
 				34D9484A1E7E4001001EB043 /* TasksGateway.swift */,
 				34D948671E7E597B001EB043 /* TasksRouter.swift */,
-				343C13D21E7ED3E400DFE86E /* ListTasksPresenter.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -265,9 +265,9 @@
 			children = (
 				343C13C41E7E824200DFE86E /* CreateTaskUIKitPresenterFactory.swift */,
 				343C13BF1E7E815E00DFE86E /* CreateTaskUseCaseFactory.swift */,
+				343C13DA1E7ED77100DFE86E /* ListAllTasksUseCaseFactory.swift */,
 				34D9485E1E7E5039001EB043 /* TasksCoreDataGatewayFactory.swift */,
 				34D9486B1E7E5B4F001EB043 /* TasksUIKitRouterFactory.swift */,
-				343C13DA1E7ED77100DFE86E /* ListAllTasksUseCaseFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
