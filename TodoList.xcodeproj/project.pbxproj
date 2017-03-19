@@ -27,6 +27,9 @@
 		34D948591E7E49C9001EB043 /* CreateTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948581E7E49C9001EB043 /* CreateTaskUseCase.swift */; };
 		34D9485B1E7E4A6C001EB043 /* CreateTaskPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9485A1E7E4A6C001EB043 /* CreateTaskPresenter.swift */; };
 		34D9485F1E7E5039001EB043 /* TasksCoreDataGatewayFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9485E1E7E5039001EB043 /* TasksCoreDataGatewayFactory.swift */; };
+		34D948681E7E597B001EB043 /* TasksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948671E7E597B001EB043 /* TasksRouter.swift */; };
+		34D9486A1E7E59CB001EB043 /* TasksUIKitRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948691E7E59CB001EB043 /* TasksUIKitRouter.swift */; };
+		34D9486C1E7E5B4F001EB043 /* TasksUIKitRouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9486B1E7E5B4F001EB043 /* TasksUIKitRouterFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		34D948581E7E49C9001EB043 /* CreateTaskUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskUseCase.swift; sourceTree = "<group>"; };
 		34D9485A1E7E4A6C001EB043 /* CreateTaskPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskPresenter.swift; sourceTree = "<group>"; };
 		34D9485E1E7E5039001EB043 /* TasksCoreDataGatewayFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksCoreDataGatewayFactory.swift; sourceTree = "<group>"; };
+		34D948671E7E597B001EB043 /* TasksRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksRouter.swift; sourceTree = "<group>"; };
+		34D948691E7E59CB001EB043 /* TasksUIKitRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksUIKitRouter.swift; sourceTree = "<group>"; };
+		34D9486B1E7E5B4F001EB043 /* TasksUIKitRouterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksUIKitRouterFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 				34D9485C1E7E5019001EB043 /* Factories */,
 				34D948491E7E3FE8001EB043 /* Gateways */,
 				34D9484E1E7E40C5001EB043 /* Protocols */,
+				34D948661E7E5967001EB043 /* Router */,
 				34D948571E7E49B7001EB043 /* UseCases */,
 				34D9481B1E7E29AD001EB043 /* Views */,
 			);
@@ -185,6 +192,7 @@
 				34D9485A1E7E4A6C001EB043 /* CreateTaskPresenter.swift */,
 				34D948371E7E3CBB001EB043 /* Task.swift */,
 				34D9484A1E7E4001001EB043 /* TasksGateway.swift */,
+				34D948671E7E597B001EB043 /* TasksRouter.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -209,8 +217,18 @@
 			isa = PBXGroup;
 			children = (
 				34D9485E1E7E5039001EB043 /* TasksCoreDataGatewayFactory.swift */,
+				34D9486B1E7E5B4F001EB043 /* TasksUIKitRouterFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		34D948661E7E5967001EB043 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				34D948691E7E59CB001EB043 /* TasksUIKitRouter.swift */,
+			);
+			name = Router;
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +304,9 @@
 			files = (
 				34D9481D1E7E29BA001EB043 /* TaskListView.swift in Sources */,
 				34D9484D1E7E407D001EB043 /* TasksCoreDataGateway.swift in Sources */,
+				34D9486A1E7E59CB001EB043 /* TasksUIKitRouter.swift in Sources */,
 				34D948591E7E49C9001EB043 /* CreateTaskUseCase.swift in Sources */,
+				34D9486C1E7E5B4F001EB043 /* TasksUIKitRouterFactory.swift in Sources */,
 				34D948261E7E2FAF001EB043 /* TaskItemViewCell.swift in Sources */,
 				34D948091E7E27E0001EB043 /* TodoList.xcdatamodeld in Sources */,
 				34D9485B1E7E4A6C001EB043 /* CreateTaskPresenter.swift in Sources */,
@@ -296,6 +316,7 @@
 				34D9485F1E7E5039001EB043 /* TasksCoreDataGatewayFactory.swift in Sources */,
 				34D948241E7E2E9C001EB043 /* TaskListDataSource.swift in Sources */,
 				34D948501E7E4123001EB043 /* TaskEntity.swift in Sources */,
+				34D948681E7E597B001EB043 /* TasksRouter.swift in Sources */,
 				34D948471E7E3E6F001EB043 /* TaskEntityCoreData+CoreDataClass.swift in Sources */,
 				34D948381E7E3CBB001EB043 /* Task.swift in Sources */,
 				34D948481E7E3E6F001EB043 /* TaskEntityCoreData+CoreDataProperties.swift in Sources */,
