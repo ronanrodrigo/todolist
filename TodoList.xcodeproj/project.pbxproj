@@ -10,6 +10,7 @@
 		34589B801E7E65170089A901 /* CreateTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34589B7F1E7E65170089A901 /* CreateTaskController.swift */; };
 		34589B821E7E6C770089A901 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34589B811E7E6C770089A901 /* Localizable.strings */; };
 		34589B841E7E6CFF0089A901 /* String+Translate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34589B831E7E6CFF0089A901 /* String+Translate.swift */; };
+		34589B861E7E70150089A901 /* CreateTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34589B851E7E70150089A901 /* CreateTaskView.swift */; };
 		34589B881E7E76D10089A901 /* CGFloat+Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34589B871E7E76D10089A901 /* CGFloat+Dimensions.swift */; };
 		34D948011E7E27E0001EB043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948001E7E27E0001EB043 /* AppDelegate.swift */; };
 		34D948091E7E27E0001EB043 /* TodoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34D948071E7E27E0001EB043 /* TodoList.xcdatamodeld */; };
@@ -40,6 +41,7 @@
 		34589B7F1E7E65170089A901 /* CreateTaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskController.swift; sourceTree = "<group>"; };
 		34589B811E7E6C770089A901 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		34589B831E7E6CFF0089A901 /* String+Translate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Translate.swift"; sourceTree = "<group>"; };
+		34589B851E7E70150089A901 /* CreateTaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskView.swift; sourceTree = "<group>"; };
 		34589B871E7E76D10089A901 /* CGFloat+Dimensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Dimensions.swift"; sourceTree = "<group>"; };
 		34D947FD1E7E27E0001EB043 /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D948001E7E27E0001EB043 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		34D9481B1E7E29AD001EB043 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				34589B851E7E70150089A901 /* CreateTaskView.swift */,
 				34D948251E7E2FAF001EB043 /* TaskItemViewCell.swift */,
 				34D9481C1E7E29BA001EB043 /* TaskListView.swift */,
 			);
@@ -324,6 +327,7 @@
 				34589B881E7E76D10089A901 /* CGFloat+Dimensions.swift in Sources */,
 				34D9485B1E7E4A6C001EB043 /* CreateTaskPresenter.swift in Sources */,
 				34D948201E7E2C06001EB043 /* UIView+Constraints.swift in Sources */,
+				34589B861E7E70150089A901 /* CreateTaskView.swift in Sources */,
 				34D948011E7E27E0001EB043 /* AppDelegate.swift in Sources */,
 				34D948551E7E4774001EB043 /* Result.swift in Sources */,
 				34D9485F1E7E5039001EB043 /* TasksCoreDataGatewayFactory.swift in Sources */,
