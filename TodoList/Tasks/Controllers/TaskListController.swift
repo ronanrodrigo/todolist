@@ -5,7 +5,7 @@ class TaskListController: UIViewController {
     private let taskListView: TaskListView
 
     init() {
-        taskListView = TaskListView(dataSource: TaskListDataSource(todoItems: []))
+        taskListView = TaskListView(dataSource: TaskListDataSource(tasks: []))
         super.init(nibName: nil, bundle: nil)
         setSubviews()
         setConstraints()

@@ -25,11 +25,7 @@ class TaskItemViewCell: UITableViewCell {
     private func setConstraints() {
         titleLabel.edges(equalTo: contentView)
     }
-
-    func setData(_ data: String) {
-        titleLabel.text = data
-    }
-
+    
 }
 
 extension TaskItemViewCell {

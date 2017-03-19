@@ -3,14 +3,14 @@ import UIKit
 class TaskListDataSource: NSObject, UITableViewDataSource {
 
     private var isRegistered = false
-    private let todoItems: [String]
+    private let tasks: [Task]
 
-    init(todoItems: [String]) {
-        self.todoItems = todoItems
+    init(tasks: [Task]) {
+        self.tasks = tasks
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return todoItems.count
+        return tasks.count
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -18,7 +18,6 @@ class TaskListDataSource: NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: TaskItemViewCell.reuseIdentifier, for: indexPath)
 
         guard let listItemCell = cell as? TaskItemViewCell else { return cell }
-        listItemCell.setData(todoItems[indexPath.row])
 
         return listItemCell
     }

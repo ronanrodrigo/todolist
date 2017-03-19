@@ -1,6 +1,6 @@
 import Foundation
 
-protocol TaskEntity {
-    var name: String { get }
-    var completed: Bool { get }
+struct TaskEntity: Task {
+    var name: String
+    var completed: Bool
 }
