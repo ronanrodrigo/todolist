@@ -4,6 +4,7 @@ import UIKit
 class TasksUIKitRouter: TasksRouter {
 
     private let window: UIWindow
+    private var listTaskController: ListTaskController?
     private let navigationController: UINavigationController = {
         let navigationController = UINavigationController()
         navigationController.navigationBar.isTranslucent = false
@@ -15,14 +16,24 @@ class TasksUIKitRouter: TasksRouter {
     }
 
     func root() {
-        navigationController.viewControllers = [TaskListController(router: self)]
+        listTaskController = ListTaskController(router: self)
+        guard let listTaskController = listTaskController else { return }
+        navigationController.viewControllers = [listTaskController]
         window.rootViewController = navigationController
     }
 
-    @objc func create() {
-        let createTaskController = CreateTaskController()
+    func create() {
+        let createTaskController = CreateTaskController(router: self)
         createTaskController.view.backgroundColor = .white
         navigationController.pushViewController(createTaskController, animated: true)
     }
 
+    func index() {
+        navigationController.popToRootViewController(animated: true)
+    }
+
+    func list() {
+        guard let listTaskController = listTaskController else { return }
+        navigationController.popToViewController(listTaskController, animated: true)
+    }
 }

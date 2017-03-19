@@ -1,10 +1,14 @@
 import Foundation
 import UIKit
 
-class TaskListController: UIViewController {
+class ListTaskController: UIViewController {
 
     private let taskListView: TaskListView
     private var router: TasksRouter
+
+    private lazy var createBarButton: UIBarButtonItem = {
+        return UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTouchAtCreateTask))
+    }()
 
     init(router: TasksRouter) {
         self.router = router
@@ -19,6 +23,11 @@ class TaskListController: UIViewController {
         fatalError(NSCoder.initCoderError)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        createBarButton.isEnabled = true
+    }
+
     private func setSubviews() {
         view.addSubview(taskListView)
     }
@@ -28,12 +37,12 @@ class TaskListController: UIViewController {
     }
 
     private func setNavigation() {
-        let barButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTouchAtCreateTask))
-        navigationItem.setRightBarButton(barButton, animated: true)
+        navigationItem.setRightBarButton(createBarButton, animated: false)
         title = String.Tasks.List.title
     }
 
     @objc private func didTouchAtCreateTask() {
+        createBarButton.isEnabled = false
         router.create()
     }
 }

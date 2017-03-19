@@ -3,13 +3,20 @@ import UIKit
 
 class CreateTaskController: UIViewController {
 
+    private var router: TasksRouter
+
     private let createTaskView: CreateTaskView = {
         let view = CreateTaskView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
-    init() {
+    private lazy var saveBarButton: UIBarButtonItem = {
+        return UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(didTouchAtSave))
+    }()
+
+    init(router: TasksRouter) {
+        self.router = router
         super.init(nibName: nil, bundle: nil)
         setSubviews()
         setConstraints()
@@ -30,8 +37,13 @@ class CreateTaskController: UIViewController {
     }
 
     private func setNavigation() {
+        navigationItem.setRightBarButton(saveBarButton, animated: true)
         title = String.Tasks.Create.title
     }
 
+    @objc private func didTouchAtSave() {
+        saveBarButton.isEnabled = false
+        router.list()
+    }
 
 }
