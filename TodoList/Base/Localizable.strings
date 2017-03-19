@@ -1,1 +1,4 @@
 "tasks.list.title" = "Tasks";
+
+"tasks.create.title" = "Create";
+"tasks.create.label.title" = "Title";

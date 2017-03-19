@@ -5,9 +5,19 @@ extension String {
     static let empty = ""
 
     struct Tasks {
+
         struct List {
             static let title = String.translate(key: "tasks.list.title")
         }
+
+        struct Create {
+            static let title = String.translate(key: "tasks.create.title")
+        }
+
+        struct Label {
+            static let title = String.translate(key: "tasks.create.label.title")
+        }
+
     }
 
     static func translate(key: String, comment: String = .empty, _ args: CVarArg...) -> String {
