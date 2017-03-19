@@ -24,7 +24,7 @@ class TaskItemViewCell: UITableViewCell {
     }
 
     private func setConstraints() {
-        titleLabel.edges(equalTo: contentView)
+        titleLabel.edges(equalToView: contentView)
     }
     
 }

@@ -24,7 +24,7 @@ class TaskListController: UIViewController {
     }
 
     private func setConstraints() {
-        taskListView.edges(equalTo: view)
+        taskListView.edges(equalToView: view)
     }
 
     private func setNavigation() {

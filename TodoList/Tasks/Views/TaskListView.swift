@@ -33,7 +33,7 @@ class TaskListView: UIView {
     }
 
     private func setConstraints() {
-        listTableView.edges(equalTo: self)
+        listTableView.edges(equalToView: self)
     }
 
 }
