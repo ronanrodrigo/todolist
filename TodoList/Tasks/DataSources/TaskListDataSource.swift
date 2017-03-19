@@ -10,7 +10,7 @@ class TaskListDataSource: NSObject, UITableViewDataSource {
         self.tasks = tasks
     }
 
-    func update(tasks: [Task]) {
+    func update(with tasks: [Task]) {
         self.tasks = tasks
     }
 

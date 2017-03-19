@@ -57,7 +57,7 @@ class ListTaskController: UIViewController {
 extension ListTaskController: ListTasksPresenter {
 
     func show(tasks: [Task]) {
-        taskListDataSource.update(tasks: tasks)
+        taskListDataSource.update(with: tasks)
         taskListView.reloadData()
     }
 
