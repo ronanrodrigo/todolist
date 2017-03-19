@@ -48,8 +48,8 @@
 		34D947F41E7E27E0001EB043 = {
 			isa = PBXGroup;
 			children = (
-				34D947FF1E7E27E0001EB043 /* TodoList */,
 				34D947FE1E7E27E0001EB043 /* Products */,
+				34D947FF1E7E27E0001EB043 /* TodoList */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,7 +99,7 @@
 				34D9481B1E7E29AD001EB043 /* Views */,
 			);
 			name = Tasks;
-			path = List;
+			path = Tasks;
 			sourceTree = "<group>";
 		};
 		34D9481A1E7E29A7001EB043 /* Controllers */ = {
@@ -122,8 +122,8 @@
 		34D9481E1E7E2BEE001EB043 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				34D9481F1E7E2C06001EB043 /* UIView+Constraints.swift */,
 				34D948271E7E354F001EB043 /* NSCoder+InitCoderMessage.swift */,
+				34D9481F1E7E2C06001EB043 /* UIView+Constraints.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
