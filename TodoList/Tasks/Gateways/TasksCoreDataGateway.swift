@@ -1,3 +1,4 @@
+import Foundation
 import CoreData
 
 class TasksCoreDataGateway: TasksGateway {
