@@ -2,11 +2,11 @@ import UIKit
 
 extension UIView {
 
-    func edges(equalToView view: UIView) {
-        leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    func edges(equalToView view: UIView, constant: CGFloat = 0) {
+        leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: constant).isActive = true
+        topAnchor.constraint(equalTo: view.topAnchor, constant: constant).isActive = true
+        trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -constant).isActive = true
+        bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -constant).isActive = true
     }
 
     func edges(equalToLayout layout: UILayoutGuide) {

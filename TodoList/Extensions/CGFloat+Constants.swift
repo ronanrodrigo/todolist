@@ -25,4 +25,6 @@ extension CGFloat {
 
     }
 
+    static let taskListEstimatedRowHeight: CGFloat = 64
+
 }

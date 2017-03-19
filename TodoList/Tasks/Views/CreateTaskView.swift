@@ -3,17 +3,17 @@ import UIKit
 
 class CreateTaskView: UIView {
 
-    private let completedSwitch: UISwitch = {
-        let compltedSwitch = UISwitch()
-        return compltedSwitch
-    }()
-
-    private let titleTextField: UITextField = {
+    private let nameTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = String.Tasks.Label.title
         textField.heightAnchor.constraint(equalToConstant: 50).isActive = true
         return textField
+    }()
+
+    private let completedSwitch: UISwitch = {
+        let compltedSwitch = UISwitch()
+        return compltedSwitch
     }()
 
     private let horizontalStackView: UIStackView = {
@@ -60,7 +60,7 @@ class CreateTaskView: UIView {
     }
 
     private func setStackView() {
-        horizontalStackView.addArrangedSubview(titleTextField)
+        horizontalStackView.addArrangedSubview(nameTextField)
         horizontalStackView.addArrangedSubview(completedSwitch)
         verticalStackView.addArrangedSubview(horizontalStackView)
         verticalStackView.addArrangedSubview(dividerView)
@@ -73,6 +73,6 @@ class CreateTaskView: UIView {
     }
 
     func generateTask() -> Task {
-        return TaskEntity(name: titleTextField.text ?? "", completed: completedSwitch.isOn)
+        return TaskEntity(name: nameTextField.text ?? "", completed: completedSwitch.isOn)
     }
 }

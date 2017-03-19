@@ -8,6 +8,8 @@ class ListTaskView: UIView {
     private let listTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = .taskListEstimatedRowHeight
         return tableView
     }()
 

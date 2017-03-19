@@ -9,8 +9,24 @@ class TaskItemViewCell: UITableViewCell {
         return label
     }()
 
+    private let completedSwitch: UISwitch = {
+        let compltedSwitch = UISwitch()
+        return compltedSwitch
+    }()
+
+    private let horizontalStackView: UIStackView = {
+        let stackView = UIStackView(frame: .zero)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .horizontal
+        stackView.alignment = .center
+        stackView.distribution = .fill
+        stackView.spacing = .defaultMargin
+        return stackView
+    }()
+
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setStackView()
         setSubviews()
         setConstraints()
     }
@@ -19,16 +35,22 @@ class TaskItemViewCell: UITableViewCell {
         fatalError(NSCoder.initCoderError)
     }
 
+    private func setStackView() {
+        horizontalStackView.addArrangedSubview(nameLabel)
+        horizontalStackView.addArrangedSubview(completedSwitch)
+    }
+
     private func setSubviews() {
-        contentView.addSubview(nameLabel)
+        contentView.addSubview(horizontalStackView)
     }
 
     private func setConstraints() {
-        nameLabel.edges(equalToLayout: layoutMarginsGuide)
+        horizontalStackView.edges(equalToView: contentView, constant: .defaultMargin)
     }
 
     func setData(task: Task) {
         nameLabel.text = task.name
+        completedSwitch.isOn = task.completed
     }
     
 }
