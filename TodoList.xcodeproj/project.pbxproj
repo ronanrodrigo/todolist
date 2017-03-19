@@ -17,6 +17,7 @@
 		34D948241E7E2E9C001EB043 /* TaskListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948231E7E2E9C001EB043 /* TaskListDataSource.swift */; };
 		34D948261E7E2FAF001EB043 /* TaskItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948251E7E2FAF001EB043 /* TaskItemViewCell.swift */; };
 		34D948281E7E354F001EB043 /* NSCoder+InitCoderMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948271E7E354F001EB043 /* NSCoder+InitCoderMessage.swift */; };
+		34D948381E7E3CBB001EB043 /* TaskEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948371E7E3CBB001EB043 /* TaskEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		34D948231E7E2E9C001EB043 /* TaskListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListDataSource.swift; sourceTree = "<group>"; };
 		34D948251E7E2FAF001EB043 /* TaskItemViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskItemViewCell.swift; sourceTree = "<group>"; };
 		34D948271E7E354F001EB043 /* NSCoder+InitCoderMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCoder+InitCoderMessage.swift"; sourceTree = "<group>"; };
+		34D948371E7E3CBB001EB043 /* TaskEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +98,9 @@
 			children = (
 				34D9481A1E7E29A7001EB043 /* Controllers */,
 				34D948211E7E2DF4001EB043 /* DataSources */,
+				34D948301E7E3C1B001EB043 /* Entities */,
 				34D9481B1E7E29AD001EB043 /* Views */,
 			);
-			name = Tasks;
 			path = Tasks;
 			sourceTree = "<group>";
 		};
@@ -134,6 +136,14 @@
 				34D948231E7E2E9C001EB043 /* TaskListDataSource.swift */,
 			);
 			path = DataSources;
+			sourceTree = "<group>";
+		};
+		34D948301E7E3C1B001EB043 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				34D948371E7E3CBB001EB043 /* TaskEntity.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +223,7 @@
 				34D948201E7E2C06001EB043 /* UIView+Constraints.swift in Sources */,
 				34D948011E7E27E0001EB043 /* AppDelegate.swift in Sources */,
 				34D948241E7E2E9C001EB043 /* TaskListDataSource.swift in Sources */,
+				34D948381E7E3CBB001EB043 /* TaskEntity.swift in Sources */,
 				34D948191E7E28E3001EB043 /* TaskListController.swift in Sources */,
 				34D948281E7E354F001EB043 /* NSCoder+InitCoderMessage.swift in Sources */,
 			);
