@@ -36,4 +36,10 @@ class TasksUIKitRouter: TasksRouter {
         guard let listTaskController = listTaskController else { return }
         navigationController.popToViewController(listTaskController, animated: true)
     }
+
+    func list(withMessage message: String) {
+        guard let listTaskController = listTaskController else { return }
+        navigationController.show(message: message)
+        navigationController.popToViewController(listTaskController, animated: true)
+    }
 }

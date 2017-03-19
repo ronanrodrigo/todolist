@@ -72,4 +72,7 @@ class CreateTaskView: UIView {
         verticalStackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
     }
 
+    func generateTask() -> Task {
+        return TaskEntity(name: titleTextField.text ?? "", completed: completedSwitch.isOn)
+    }
 }

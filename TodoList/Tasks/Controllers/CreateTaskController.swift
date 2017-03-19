@@ -43,7 +43,9 @@ class CreateTaskController: UIViewController {
 
     @objc private func didTouchAtSave() {
         saveBarButton.isEnabled = false
-        router.list()
+        CreateTaskUseCaseFactory
+            .make(presenter: CreateTaskUIKitPresenterFactory.make(router: router))
+            .create(task: createTaskView.generateTask())
     }
 
 }

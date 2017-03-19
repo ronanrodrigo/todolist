@@ -12,6 +12,11 @@ extension String {
 
         struct Create {
             static let title = String.translate(key: "tasks.create.title")
+
+            struct Message {
+                static let success = String.translate(key: "tasks.create.message.success")
+            }
+
         }
 
         struct Label {

@@ -2,3 +2,4 @@
 
 "tasks.create.title" = "Create";
 "tasks.create.label.title" = "Title";
+"tasks.create.message.success" = "Success";
