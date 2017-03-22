@@ -20,7 +20,8 @@ public extension String {
     }
 
     public static func translate(key: String, comment: String = .empty, _ args: CVarArg...) -> String {
-        let format = NSLocalizedString(key, comment: comment)
+        guard let frameworkBundle = Bundle(identifier: .identifierCocoaTouchFrameworkBundle) else { fatalError(#function) }
+        let format = NSLocalizedString(key, bundle: frameworkBundle, comment: comment)
         return String(format: format, locale: Locale.current, arguments: args)
     }
 

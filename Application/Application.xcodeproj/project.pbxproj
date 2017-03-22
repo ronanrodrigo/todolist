@@ -12,7 +12,6 @@
 		343C13C71E7E8F5400DFE86E /* UINavigationController+Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343C13C61E7E8F5400DFE86E /* UINavigationController+Message.swift */; };
 		343C13CB1E7ECE1400DFE86E /* UIColors+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343C13CA1E7ECE1400DFE86E /* UIColors+Constants.swift */; };
 		34589B801E7E65170089A901 /* CreateTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34589B7F1E7E65170089A901 /* CreateTaskController.swift */; };
-		34589B821E7E6C770089A901 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34589B811E7E6C770089A901 /* Localizable.strings */; };
 		34589B861E7E70150089A901 /* CreateTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34589B851E7E70150089A901 /* CreateTaskView.swift */; };
 		34A9B0711E82C0760076748F /* TodoListSharedCocoaTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A9B06E1E82BFF50076748F /* TodoListSharedCocoaTouch.framework */; };
 		34A9B0721E82C0760076748F /* TodoListSharedCocoaTouch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 34A9B06E1E82BFF50076748F /* TodoListSharedCocoaTouch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -53,7 +52,6 @@
 		343C13C61E7E8F5400DFE86E /* UINavigationController+Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Message.swift"; sourceTree = "<group>"; };
 		343C13CA1E7ECE1400DFE86E /* UIColors+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColors+Constants.swift"; sourceTree = "<group>"; };
 		34589B7F1E7E65170089A901 /* CreateTaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskController.swift; sourceTree = "<group>"; };
-		34589B811E7E6C770089A901 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		34589B851E7E70150089A901 /* CreateTaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskView.swift; sourceTree = "<group>"; };
 		34A9B06E1E82BFF50076748F /* TodoListSharedCocoaTouch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TodoListSharedCocoaTouch.framework; path = "../../../Library/Developer/Xcode/DerivedData/TodoList-elhvkqftfizdirfyihnzqnatlszg/Build/Products/Debug-iphonesimulator/TodoListSharedCocoaTouch.framework"; sourceTree = "<group>"; };
 		34D947FD1E7E27E0001EB043 /* TodoList-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TodoList-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,7 +135,6 @@
 				34D9480A1E7E27E0001EB043 /* Assets.xcassets */,
 				34D9480F1E7E27E0001EB043 /* Info.plist */,
 				34D9480C1E7E27E0001EB043 /* LaunchScreen.storyboard */,
-				34589B811E7E6C770089A901 /* Localizable.strings */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -275,7 +272,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				34D9480E1E7E27E0001EB043 /* LaunchScreen.storyboard in Resources */,
-				34589B821E7E6C770089A901 /* Localizable.strings in Resources */,
 				34D9480B1E7E27E0001EB043 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

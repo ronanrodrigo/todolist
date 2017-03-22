@@ -6,7 +6,7 @@ public class CoreDataStack {
     public init() {}
 
     private lazy var container: NSPersistentContainer = {
-        guard let frameworkBundle = Bundle(identifier: "com.ronanrodrigo.todolist.shared.cocoatouch"),
+        guard let frameworkBundle = Bundle(identifier: .identifierCocoaTouchFrameworkBundle),
             let modelURL = frameworkBundle.url(forResource: "TodoList", withExtension: "momd"),
             let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL) else {
                 fatalError(#function)

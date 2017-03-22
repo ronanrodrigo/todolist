@@ -16,6 +16,7 @@
 		67A9508C4D010D18D4C3860E /* CreateTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A95A4131770F68646312AD /* CreateTaskUseCase.swift */; };
 		67A950DC1F3420238034338C /* UpdateTaskPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A958CDE871C5A3826500D8 /* UpdateTaskPresenter.swift */; };
 		67A951B171D3F282BE304CC7 /* TasksCoreDataGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A955EA841CEEBE3053C227 /* TasksCoreDataGateway.swift */; };
+		67A9532646585AE5D021456B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67A95E5DA0F8F36250E54071 /* Localizable.strings */; };
 		67A953598758C05A9F412A67 /* ListAllTasksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A957FD17EE1DB4339E67EC /* ListAllTasksUseCase.swift */; };
 		67A9535FF692269CD755DCF5 /* ListTasksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A95CB71E9FEE8B63A19BC5 /* ListTasksPresenter.swift */; };
 		67A953C624259F9384626AB4 /* TasksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A9557BCA6C5AF8133968D3 /* TasksRouter.swift */; };
@@ -63,6 +64,7 @@
 		67A95CB71E9FEE8B63A19BC5 /* ListTasksPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTasksPresenter.swift; sourceTree = "<group>"; };
 		67A95E16DBE769F2282F1C09 /* DeleteTasksPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteTasksPresenter.swift; sourceTree = "<group>"; };
 		67A95E51F2F1A835222257BD /* Double+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Constants.swift"; sourceTree = "<group>"; };
+		67A95E5DA0F8F36250E54071 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		67A95E5FAE8CD11C312277CE /* String+Translate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Translate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 			children = (
 				34A9B0371E82B0130076748F /* Info.plist */,
 				34A9B0361E82B0130076748F /* TodoListCocoaTouchShared.h */,
+				67A95E5DA0F8F36250E54071 /* Localizable.strings */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67A9532646585AE5D021456B /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
