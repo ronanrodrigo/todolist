@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import TodoListSharedCocoaTouch
 
-class ListTaskDataSource: NSObject, UITableViewDataSource {
+class ListTaskTableViewDataSource: NSObject, UITableViewDataSource {
 
     private var isRegistered = false
     private var tasks: [Task]

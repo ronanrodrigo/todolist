@@ -5,7 +5,7 @@ import TodoListSharedCocoaTouch
 class ListTaskController: UIViewController {
 
     fileprivate var listTaskView: ListTaskView!
-    fileprivate var listTaskDataSource: ListTaskDataSource!
+    fileprivate var listTaskDataSource: ListTaskTableViewDataSource!
     private var router: TasksRouter
 
     private lazy var createBarButton: UIBarButtonItem = {
@@ -15,7 +15,7 @@ class ListTaskController: UIViewController {
     init(router: TasksRouter) {
         self.router = router
         super.init(nibName: nil, bundle: nil)
-        listTaskDataSource = ListTaskDataSource(
+        listTaskDataSource = ListTaskTableViewDataSource(
             tasks: [],
             deleteTask: { [unowned self] in DeleteTaskUseCaseFactory.make(presenter: self).delete(identifier: $0) },
             updateTask: { [unowned self] in UpdateTaskUseCaseFactory.make(presenter: self).update(task: $0) }

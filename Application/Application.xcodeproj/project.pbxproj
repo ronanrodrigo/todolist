@@ -29,7 +29,7 @@
 		34D948191E7E28E3001EB043 /* ListTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948181E7E28E3001EB043 /* ListTaskController.swift */; };
 		34D9481D1E7E29BA001EB043 /* ListTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9481C1E7E29BA001EB043 /* ListTaskView.swift */; };
 		34D948201E7E2C06001EB043 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9481F1E7E2C06001EB043 /* UIView+Constraints.swift */; };
-		34D948241E7E2E9C001EB043 /* ListTaskDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948231E7E2E9C001EB043 /* ListTaskDataSource.swift */; };
+		34D948241E7E2E9C001EB043 /* ListTaskTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948231E7E2E9C001EB043 /* ListTaskTableViewDataSource.swift */; };
 		34D948261E7E2FAF001EB043 /* TaskItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948251E7E2FAF001EB043 /* TaskItemViewCell.swift */; };
 		34D9486A1E7E59CB001EB043 /* TasksUIKitRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948691E7E59CB001EB043 /* TasksUIKitRouter.swift */; };
 		34D9486C1E7E5B4F001EB043 /* TasksUIKitRouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9486B1E7E5B4F001EB043 /* TasksUIKitRouterFactory.swift */; };
@@ -90,7 +90,7 @@
 		34D948181E7E28E3001EB043 /* ListTaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTaskController.swift; sourceTree = "<group>"; };
 		34D9481C1E7E29BA001EB043 /* ListTaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTaskView.swift; sourceTree = "<group>"; };
 		34D9481F1E7E2C06001EB043 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
-		34D948231E7E2E9C001EB043 /* ListTaskDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTaskDataSource.swift; sourceTree = "<group>"; };
+		34D948231E7E2E9C001EB043 /* ListTaskTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTaskTableViewDataSource.swift; sourceTree = "<group>"; };
 		34D948251E7E2FAF001EB043 /* TaskItemViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskItemViewCell.swift; sourceTree = "<group>"; };
 		34D948691E7E59CB001EB043 /* TasksUIKitRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksUIKitRouter.swift; sourceTree = "<group>"; };
 		34D9486B1E7E5B4F001EB043 /* TasksUIKitRouterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksUIKitRouterFactory.swift; sourceTree = "<group>"; };
@@ -201,6 +201,7 @@
 		34D948171E7E289A001EB043 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				34DD90281E98489800ADDB4F /* Delegates */,
 				34D9481A1E7E29A7001EB043 /* Controllers */,
 				34D948211E7E2DF4001EB043 /* DataSources */,
 				34D9485C1E7E5019001EB043 /* Factories */,
@@ -243,7 +244,7 @@
 		34D948211E7E2DF4001EB043 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				34D948231E7E2E9C001EB043 /* ListTaskDataSource.swift */,
+				34D948231E7E2E9C001EB043 /* ListTaskTableViewDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -268,6 +269,13 @@
 				34D948691E7E59CB001EB043 /* TasksUIKitRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		34DD90281E98489800ADDB4F /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Delegates;
 			sourceTree = "<group>";
 		};
 		67A950EFF1C2FFD6970E5F41 /* DataSources */ = {
@@ -452,7 +460,7 @@
 				34589B861E7E70150089A901 /* CreateTaskView.swift in Sources */,
 				34D948011E7E27E0001EB043 /* AppDelegate.swift in Sources */,
 				343C13C51E7E824200DFE86E /* CreateTaskUIKitPresenterFactory.swift in Sources */,
-				34D948241E7E2E9C001EB043 /* ListTaskDataSource.swift in Sources */,
+				34D948241E7E2E9C001EB043 /* ListTaskTableViewDataSource.swift in Sources */,
 				343C13C71E7E8F5400DFE86E /* UINavigationController+Message.swift in Sources */,
 				343C13C31E7E81AD00DFE86E /* CreateTaskUIKitPresenter.swift in Sources */,
 				34589B801E7E65170089A901 /* CreateTaskController.swift in Sources */,

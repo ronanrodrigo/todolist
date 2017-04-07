@@ -3,7 +3,7 @@ import UIKit
 
 class ListTaskView: UIView {
 
-    private var dataSource: ListTaskDataSource
+    private var dataSource: ListTaskTableViewDataSource
 
     private let listTableView: UITableView = {
         let tableView = UITableView()
@@ -13,7 +13,7 @@ class ListTaskView: UIView {
         return tableView
     }()
 
-    init(dataSource: ListTaskDataSource) {
+    init(dataSource: ListTaskTableViewDataSource) {
         self.dataSource = dataSource
         super.init(frame: .zero)
         setDataSource()
