@@ -210,9 +210,9 @@
 		34D948171E7E289A001EB043 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
-				34DD90281E98489800ADDB4F /* Delegates */,
 				34D9481A1E7E29A7001EB043 /* Controllers */,
 				34D948211E7E2DF4001EB043 /* DataSources */,
+				34DD90281E98489800ADDB4F /* Delegates */,
 				34D9485C1E7E5019001EB043 /* Factories */,
 				343C13C11E7E818B00DFE86E /* Presenters */,
 				34D948661E7E5967001EB043 /* Router */,
@@ -225,8 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				34589B7F1E7E65170089A901 /* CreateTaskController.swift */,
-				34D948181E7E28E3001EB043 /* ListTaskController.swift */,
 				34DD902B1E984CFF00ADDB4F /* EditTaskController.swift */,
+				34D948181E7E28E3001EB043 /* ListTaskController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -268,8 +268,8 @@
 				67A95923E53A7B5B79FE7F3F /* ListAllTasksUseCaseFactory.swift */,
 				67A952C47CB0DDE7A501BBB2 /* TasksCoreDataGatewayFactory.swift */,
 				34D9486B1E7E5B4F001EB043 /* TasksUIKitRouterFactory.swift */,
-				67A954C9377AB3BEA5A1CEBC /* UpdateTaskUseCaseFactory.swift */,
 				34DD902F1E984FC800ADDB4F /* UpdateTaskUIKitPresenterFactory.swift */,
+				67A954C9377AB3BEA5A1CEBC /* UpdateTaskUseCaseFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -288,6 +288,7 @@
 				34DD90291E984A3800ADDB4F /* ListTaskTableViewDelegate.swift */,
 			);
 			name = Delegates;
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 		67A950EFF1C2FFD6970E5F41 /* DataSources */ = {
@@ -333,9 +334,9 @@
 				67A958B6115DCE3FDB2F98FE /* Controllers */,
 				67A950EFF1C2FFD6970E5F41 /* DataSources */,
 				67A9527BA8217622F995DFA1 /* Factories */,
+				67A9543193E4BAA855B95D0B /* Presenters */,
 				67A95D8D71CB36C9A91E0328 /* Router */,
 				67A9519A16F39B07DA6BAFE5 /* Views */,
-				67A9543193E4BAA855B95D0B /* Presenters */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
