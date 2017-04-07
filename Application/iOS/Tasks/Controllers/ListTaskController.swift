@@ -6,6 +6,7 @@ class ListTaskController: UIViewController {
 
     fileprivate var listTaskView: ListTaskView!
     fileprivate var listTaskDataSource: ListTaskTableViewDataSource!
+    fileprivate var listTaskDelegate: ListTaskTableViewDelegate!
     private var router: TasksRouter
 
     private lazy var createBarButton: UIBarButtonItem = {
@@ -20,7 +21,8 @@ class ListTaskController: UIViewController {
             deleteTask: { [unowned self] in DeleteTaskUseCaseFactory.make(presenter: self).delete(identifier: $0) },
             updateTask: { [unowned self] in UpdateTaskUseCaseFactory.make(presenter: self).update(task: $0) }
         )
-        listTaskView = ListTaskView(dataSource: listTaskDataSource)
+        listTaskDelegate = ListTaskTableViewDelegate(dataProvider: listTaskDataSource, router: router)
+        listTaskView = ListTaskView(dataSource: listTaskDataSource, delegate: listTaskDelegate)
         setSubviews()
         setConstraints()
         setNavigation()

@@ -5,6 +5,8 @@ class ListTaskView: UIView {
 
     private var dataSource: ListTaskTableViewDataSource
 
+    private var delegate: ListTaskTableViewDelegate
+
     private let listTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -13,28 +15,30 @@ class ListTaskView: UIView {
         return tableView
     }()
 
-    init(dataSource: ListTaskTableViewDataSource) {
+    init(dataSource: ListTaskTableViewDataSource, delegate: ListTaskTableViewDelegate) {
         self.dataSource = dataSource
+        self.delegate = delegate
         super.init(frame: .zero)
-        setDataSource()
-        setSubviews()
-        setConstraints()
+        setupTableView()
+        setupSubviews()
+        setupConstraints()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError(NSCoder.initCoderError)
     }
 
-    private func setDataSource() {
-        translatesAutoresizingMaskIntoConstraints = false
+    private func setupTableView() {
         listTableView.dataSource = dataSource
+        listTableView.delegate = delegate
     }
 
-    private func setSubviews() {
+    private func setupSubviews() {
+        translatesAutoresizingMaskIntoConstraints = false
         addSubview(listTableView)
     }
 
-    private func setConstraints() {
+    private func setupConstraints() {
         listTableView.edges(equalToView: self)
     }
 

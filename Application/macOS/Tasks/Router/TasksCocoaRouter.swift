@@ -32,4 +32,7 @@ class TasksCocoaRouter: TasksRouter {
     func list(withFailMessage message: String) {
         list()
     }
+
+    func edit(task: Task) {
+    }
 }

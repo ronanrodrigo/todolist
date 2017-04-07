@@ -46,6 +46,8 @@ class CreateTaskView: UIView {
         return view
     }
 
+    private var task: Task?
+
     init() {
         super.init(frame: .zero)
         setSubviews()
@@ -74,10 +76,16 @@ class CreateTaskView: UIView {
         verticalStackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
     }
 
+    func setupData(task: Task) {
+        self.task = task
+        nameTextField.text = task.name
+        completedSwitch.isOn = task.completed
+    }
+
     func generateTask() -> Task? {
         guard let taskName = nameTextField.text, taskName != .empty else { return nil }
         return TaskEntity(
-            identifier: .newEnityIdentifier,
+            identifier: task?.identifier ?? .newEnityIdentifier,
             name: taskName,
             completed: completedSwitch.isOn)
     }

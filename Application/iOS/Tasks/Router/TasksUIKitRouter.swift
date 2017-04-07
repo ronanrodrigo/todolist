@@ -48,4 +48,10 @@ class TasksUIKitRouter: TasksRouter {
         navigationController.show(message: message, backgroundColor: .failBackground)
         list()
     }
+
+    func edit(task: Task) {
+        let editTaskController = EditTaskController(router: self, task: task)
+        editTaskController.view.backgroundColor = .white
+        navigationController.pushViewController(editTaskController, animated: true)
+    }
 }

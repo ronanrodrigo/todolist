@@ -2,7 +2,11 @@ import Foundation
 import UIKit
 import TodoListSharedCocoaTouch
 
-class ListTaskTableViewDataSource: NSObject, UITableViewDataSource {
+protocol ListTaskDataProvider {
+    func task(at indexPath: IndexPath) -> Task
+}
+
+class ListTaskTableViewDataSource: NSObject, UITableViewDataSource, ListTaskDataProvider {
 
     private var isRegistered = false
     private var tasks: [Task]
@@ -29,6 +33,8 @@ class ListTaskTableViewDataSource: NSObject, UITableViewDataSource {
         tasks.remove(at: taskIndex)
         return taskIndex
     }
+
+    // - MARK: UITableViewDataSource
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasks.count
@@ -64,4 +70,10 @@ class ListTaskTableViewDataSource: NSObject, UITableViewDataSource {
         }
     }
 
+
+    // - MARK: ListTaskDataProvider
+
+    func task(at indexPath: IndexPath) -> Task {
+        return tasks[indexPath.row]
+    }
 }

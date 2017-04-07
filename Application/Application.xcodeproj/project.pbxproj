@@ -33,6 +33,10 @@
 		34D948261E7E2FAF001EB043 /* TaskItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948251E7E2FAF001EB043 /* TaskItemViewCell.swift */; };
 		34D9486A1E7E59CB001EB043 /* TasksUIKitRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948691E7E59CB001EB043 /* TasksUIKitRouter.swift */; };
 		34D9486C1E7E5B4F001EB043 /* TasksUIKitRouterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D9486B1E7E5B4F001EB043 /* TasksUIKitRouterFactory.swift */; };
+		34DD902A1E984A3800ADDB4F /* ListTaskTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DD90291E984A3800ADDB4F /* ListTaskTableViewDelegate.swift */; };
+		34DD902C1E984CFF00ADDB4F /* EditTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DD902B1E984CFF00ADDB4F /* EditTaskController.swift */; };
+		34DD902E1E984F5600ADDB4F /* UpdateTaskUIKitPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DD902D1E984F5600ADDB4F /* UpdateTaskUIKitPresenter.swift */; };
+		34DD90301E984FC800ADDB4F /* UpdateTaskUIKitPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DD902F1E984FC800ADDB4F /* UpdateTaskUIKitPresenterFactory.swift */; };
 		67A950963FF61905360F3244 /* CreateTaskUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A957F8E313374D07B0A3FC /* CreateTaskUseCaseFactory.swift */; };
 		67A95870F528B0E9B007D019 /* ListAllTasksUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A95923E53A7B5B79FE7F3F /* ListAllTasksUseCaseFactory.swift */; };
 		67A95C2DE23B79AAC5251D7E /* UpdateTaskUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A954C9377AB3BEA5A1CEBC /* UpdateTaskUseCaseFactory.swift */; };
@@ -94,6 +98,10 @@
 		34D948251E7E2FAF001EB043 /* TaskItemViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskItemViewCell.swift; sourceTree = "<group>"; };
 		34D948691E7E59CB001EB043 /* TasksUIKitRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksUIKitRouter.swift; sourceTree = "<group>"; };
 		34D9486B1E7E5B4F001EB043 /* TasksUIKitRouterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksUIKitRouterFactory.swift; sourceTree = "<group>"; };
+		34DD90291E984A3800ADDB4F /* ListTaskTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTaskTableViewDelegate.swift; sourceTree = "<group>"; };
+		34DD902B1E984CFF00ADDB4F /* EditTaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTaskController.swift; sourceTree = "<group>"; };
+		34DD902D1E984F5600ADDB4F /* UpdateTaskUIKitPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTaskUIKitPresenter.swift; sourceTree = "<group>"; };
+		34DD902F1E984FC800ADDB4F /* UpdateTaskUIKitPresenterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTaskUIKitPresenterFactory.swift; sourceTree = "<group>"; };
 		67A952C47CB0DDE7A501BBB2 /* TasksCoreDataGatewayFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksCoreDataGatewayFactory.swift; sourceTree = "<group>"; };
 		67A954C9377AB3BEA5A1CEBC /* UpdateTaskUseCaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateTaskUseCaseFactory.swift; sourceTree = "<group>"; };
 		67A955013DCBB442DD148A66 /* DeleteTaskUseCaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteTaskUseCaseFactory.swift; sourceTree = "<group>"; };
@@ -125,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				343C13C21E7E81AD00DFE86E /* CreateTaskUIKitPresenter.swift */,
+				34DD902D1E984F5600ADDB4F /* UpdateTaskUIKitPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -217,6 +226,7 @@
 			children = (
 				34589B7F1E7E65170089A901 /* CreateTaskController.swift */,
 				34D948181E7E28E3001EB043 /* ListTaskController.swift */,
+				34DD902B1E984CFF00ADDB4F /* EditTaskController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -259,6 +269,7 @@
 				67A952C47CB0DDE7A501BBB2 /* TasksCoreDataGatewayFactory.swift */,
 				34D9486B1E7E5B4F001EB043 /* TasksUIKitRouterFactory.swift */,
 				67A954C9377AB3BEA5A1CEBC /* UpdateTaskUseCaseFactory.swift */,
+				34DD902F1E984FC800ADDB4F /* UpdateTaskUIKitPresenterFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -274,6 +285,7 @@
 		34DD90281E98489800ADDB4F /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
+				34DD90291E984A3800ADDB4F /* ListTaskTableViewDelegate.swift */,
 			);
 			name = Delegates;
 			sourceTree = "<group>";
@@ -461,13 +473,17 @@
 				34D948011E7E27E0001EB043 /* AppDelegate.swift in Sources */,
 				343C13C51E7E824200DFE86E /* CreateTaskUIKitPresenterFactory.swift in Sources */,
 				34D948241E7E2E9C001EB043 /* ListTaskTableViewDataSource.swift in Sources */,
+				34DD902C1E984CFF00ADDB4F /* EditTaskController.swift in Sources */,
 				343C13C71E7E8F5400DFE86E /* UINavigationController+Message.swift in Sources */,
+				34DD90301E984FC800ADDB4F /* UpdateTaskUIKitPresenterFactory.swift in Sources */,
 				343C13C31E7E81AD00DFE86E /* CreateTaskUIKitPresenter.swift in Sources */,
 				34589B801E7E65170089A901 /* CreateTaskController.swift in Sources */,
 				34D948191E7E28E3001EB043 /* ListTaskController.swift in Sources */,
 				67A95E16CDFD16583923498E /* TasksCoreDataGatewayFactory.swift in Sources */,
+				34DD902A1E984A3800ADDB4F /* ListTaskTableViewDelegate.swift in Sources */,
 				67A95C2DE23B79AAC5251D7E /* UpdateTaskUseCaseFactory.swift in Sources */,
 				67A950963FF61905360F3244 /* CreateTaskUseCaseFactory.swift in Sources */,
+				34DD902E1E984F5600ADDB4F /* UpdateTaskUIKitPresenter.swift in Sources */,
 				67A95870F528B0E9B007D019 /* ListAllTasksUseCaseFactory.swift in Sources */,
 				67A95F50A28853ECBCA8C7E6 /* DeleteTaskUseCaseFactory.swift in Sources */,
 			);
