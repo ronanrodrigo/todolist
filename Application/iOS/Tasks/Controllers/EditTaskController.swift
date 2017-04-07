@@ -7,8 +7,8 @@ class EditTaskController: UIViewController {
     private var router: TasksRouter
     private let task: Task
 
-    private let formView: CreateTaskView = {
-        let view = CreateTaskView()
+    private let formTaskView: FormTaskView = {
+        let view = FormTaskView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -32,12 +32,12 @@ class EditTaskController: UIViewController {
     }
 
     private func setupSubviews() {
-        view.addSubview(formView)
+        view.addSubview(formTaskView)
     }
 
     private func setupConstraints() {
         let margin = view.layoutMarginsGuide
-        formView.edges(equalToLayout: margin)
+        formTaskView.edges(equalToLayout: margin)
     }
 
     private func setupNavigation() {
@@ -46,11 +46,11 @@ class EditTaskController: UIViewController {
     }
 
     private func setupForm() {
-        formView.setupData(task: task)
+        formTaskView.setupData(task: task)
     }
 
     @objc private func didTouchAtSave() {
-        guard let task = formView.generateTask() else { return }
+        guard let task = formTaskView.generateTask() else { return }
         saveBarButton.isEnabled = false
         UpdateTaskUseCaseFactory
             .make(presenter: UpdateTaskUIKitPresenterFactory.make(router: router))

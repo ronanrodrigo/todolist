@@ -20,7 +20,7 @@
 		3441BD7F1E83298F00AEF8A1 /* TodoListSharedCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3441BD7C1E83298B00AEF8A1 /* TodoListSharedCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3441BD821E8329CA00AEF8A1 /* TasksCocoaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3441BD811E8329CA00AEF8A1 /* TasksCocoaRouter.swift */; };
 		34589B801E7E65170089A901 /* CreateTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34589B7F1E7E65170089A901 /* CreateTaskController.swift */; };
-		34589B861E7E70150089A901 /* CreateTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34589B851E7E70150089A901 /* CreateTaskView.swift */; };
+		34589B861E7E70150089A901 /* FormTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34589B851E7E70150089A901 /* FormTaskView.swift */; };
 		34A9B0711E82C0760076748F /* TodoListSharedCocoaTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A9B06E1E82BFF50076748F /* TodoListSharedCocoaTouch.framework */; };
 		34A9B0721E82C0760076748F /* TodoListSharedCocoaTouch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 34A9B06E1E82BFF50076748F /* TodoListSharedCocoaTouch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		34D948011E7E27E0001EB043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D948001E7E27E0001EB043 /* AppDelegate.swift */; };
@@ -84,7 +84,7 @@
 		3441BD7C1E83298B00AEF8A1 /* TodoListSharedCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TodoListSharedCocoa.framework; path = "../../../Library/Developer/Xcode/DerivedData/TodoList-elhvkqftfizdirfyihnzqnatlszg/Build/Products/Debug/TodoListSharedCocoa.framework"; sourceTree = "<group>"; };
 		3441BD811E8329CA00AEF8A1 /* TasksCocoaRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksCocoaRouter.swift; sourceTree = "<group>"; };
 		34589B7F1E7E65170089A901 /* CreateTaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskController.swift; sourceTree = "<group>"; };
-		34589B851E7E70150089A901 /* CreateTaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskView.swift; sourceTree = "<group>"; };
+		34589B851E7E70150089A901 /* FormTaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTaskView.swift; sourceTree = "<group>"; };
 		34A9B06E1E82BFF50076748F /* TodoListSharedCocoaTouch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TodoListSharedCocoaTouch.framework; path = "../../../Library/Developer/Xcode/DerivedData/TodoList-elhvkqftfizdirfyihnzqnatlszg/Build/Products/Debug-iphonesimulator/TodoListSharedCocoaTouch.framework"; sourceTree = "<group>"; };
 		34D947FD1E7E27E0001EB043 /* TodoList-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TodoList-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D948001E7E27E0001EB043 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -234,7 +234,7 @@
 		34D9481B1E7E29AD001EB043 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				34589B851E7E70150089A901 /* CreateTaskView.swift */,
+				34589B851E7E70150089A901 /* FormTaskView.swift */,
 				34D9481C1E7E29BA001EB043 /* ListTaskView.swift */,
 				34D948251E7E2FAF001EB043 /* TaskItemViewCell.swift */,
 			);
@@ -287,7 +287,6 @@
 			children = (
 				34DD90291E984A3800ADDB4F /* ListTaskTableViewDelegate.swift */,
 			);
-			name = Delegates;
 			path = Delegates;
 			sourceTree = "<group>";
 		};
@@ -470,7 +469,7 @@
 				34D9486C1E7E5B4F001EB043 /* TasksUIKitRouterFactory.swift in Sources */,
 				34D948261E7E2FAF001EB043 /* TaskItemViewCell.swift in Sources */,
 				34D948201E7E2C06001EB043 /* UIView+Constraints.swift in Sources */,
-				34589B861E7E70150089A901 /* CreateTaskView.swift in Sources */,
+				34589B861E7E70150089A901 /* FormTaskView.swift in Sources */,
 				34D948011E7E27E0001EB043 /* AppDelegate.swift in Sources */,
 				343C13C51E7E824200DFE86E /* CreateTaskUIKitPresenterFactory.swift in Sources */,
 				34D948241E7E2E9C001EB043 /* ListTaskTableViewDataSource.swift in Sources */,

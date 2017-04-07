@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import TodoListSharedCocoaTouch
 
-class CreateTaskView: UIView {
+class FormTaskView: UIView {
 
     private let nameTextField: UITextField = {
         let textField = UITextField()
