@@ -52,6 +52,7 @@ public class TasksCoreDataGateway: TasksGateway {
             taskCoreData.name = task.name
             taskCoreData.completed = task.completed
             completion(Result.success(taskCoreData))
+            try persistentContainer.viewContext.save()
         } catch {
             completion(Result.fail(error))
         }
